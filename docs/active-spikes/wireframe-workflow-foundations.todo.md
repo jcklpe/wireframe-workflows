@@ -13,7 +13,6 @@ This repository is public. Skills and examples use synthetic content; consuming 
 
 ## To Do
 - Draft the remaining skills, one at a time and each reviewed by the user before committing, keeping them tool-agnostic and plain-language with the skill-authoring guidance. Validate frontmatter and links for each:
-  - `map-user-flows`.
   - `audit-wcag`.
   - `spec-wireframes`.
   - `check-implementation`.
@@ -32,6 +31,7 @@ This repository is public. Skills and examples use synthetic content; consuming 
 - `explore-wireframe-options` draft: framing the question, fair side-by-side options in Scratchpad, presenting trade-offs and waiting for the choice, folding it into Workshop, and recording and retiring the decision.
 - `promote-wireframes` draft: checks before copying (states, dead ends, library use, example content), an approved plan, copying into Prototype with retargeted links, a named version, a change note, flagging affected Showroom screens, and refreshing the project's copies.
 - `update-wireframe-workflows` draft: reading the pin and project branch, sorting shared improvements, project choices and conflicts, merging and pinning, carrying page, manifest, capability and routing changes through to the project with approval, sharing improvements back, and verification. Setup and the README link to it.
+- `map-user-flows` draft: naming the goal and its sources, reading the existing route, an outline of steps, actions, branches and ends agreed before drawing, a plain flow map in Scratchpad marking existing, changed and new steps, and the hand-off to `build-wireframes`. `build-wireframes` and the README link to it.
 - Repository scaffold and Project Workflows adoption: review README, AGENTS and the workflow configuration.
 
 ## Done

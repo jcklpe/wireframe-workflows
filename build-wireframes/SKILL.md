@@ -11,7 +11,7 @@ The engine for everyday design work. The rules for each page live in the policie
 2. **Read the current state.** Look at the affected part of Workshop, how it connects, and what the Component Library and tokens offer. Change nothing yet.
 3. **Choose the path.**
    - The request is clear: build it in Workshop (step 4).
-   - The route through the product is unclear: map it first with `map-user-flows`.
+   - The route through the product is unclear: map it first with [map-user-flows](../map-user-flows/SKILL.md).
    - A design question has one likely answer: ask the user.
    - A design question has several reasonable answers: lay them out with `explore-wireframe-options`, then build the user's choice.
    - The work needs a reusable part the library lacks: draft it locally in Workshop now, and propose the Component Library change as its own task. Once the user approves and the part exists, swap the local draft for the component.
