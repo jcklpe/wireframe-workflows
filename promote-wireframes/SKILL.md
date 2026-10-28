@@ -37,6 +37,6 @@ Show the user one short list: the boards to copy, the Prototype boards they repl
 - **Flag Showroom:** list the Showroom screens that show something this promotion changed. Updating them is the user's choice, following the [Showroom policy](../policies/showroom.md).
 
 ## 6. Refresh the project's copies
-Refresh the local copies listed in `design-files.json`, such as the native archive, image exports and design tokens, through the tool skill, and the specs through `spec-wireframes` when the project uses them, all from the promoted state. Use the change note as the body of the project's commit, follow its commit policy, and never push.
+Refresh the local copies listed in `design-files.json`, such as the native archive, image exports and design tokens, through the tool skill, and the specs through [spec-wireframes](../spec-wireframes/SKILL.md) when the project uses them, all from the promoted state. Use the change note as the body of the project's commit, follow its commit policy, and never push.
 
 Report what was promoted, the checks and any accepted gaps, the version name, the flagged Showroom screens, what was refreshed, and anything left for the user to do by hand.
