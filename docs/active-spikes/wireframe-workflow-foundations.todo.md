@@ -13,7 +13,6 @@ This repository is public. Skills and examples use synthetic content; consuming 
 
 ## To Do
 - Draft the remaining skills, one at a time and each reviewed by the user before committing, keeping them tool-agnostic and plain-language with the skill-authoring guidance. Validate frontmatter and links for each:
-  - `audit-wcag`.
   - `spec-wireframes`.
   - `check-implementation`.
 - In Agent Hands' `use-penpot`, explain how Penpot does each item in the README's design-tool list, under the same names. Answer the Penpot questions there: copying boards between pages, whether prototype links are limited to one page, and reading interactions for the state and dead-end checks.
@@ -32,6 +31,7 @@ This repository is public. Skills and examples use synthetic content; consuming 
 - `promote-wireframes` draft: checks before copying (states, dead ends, library use, example content), an approved plan, copying into Prototype with retargeted links, a named version, a change note, flagging affected Showroom screens, and refreshing the project's copies.
 - `update-wireframe-workflows` draft: reading the pin and project branch, sorting shared improvements, project choices and conflicts, merging and pinning, carrying page, manifest, capability and routing changes through to the project with approval, sharing improvements back, and verification. Setup and the README link to it.
 - `map-user-flows` draft: naming the goal and its sources, reading the existing route, an outline of steps, actions, branches and ends agreed before drawing, a plain flow map in Scratchpad marking existing, changed and new steps, and the hand-off to `build-wireframes`. `build-wireframes` and the README link to it.
+- `audit-wcag` draft: a read-only check against WCAG 2.2 AA by default, covering what a design can show (contrast from tokens, use of color, target size, reflow, headings, consistency, form labels and errors, repeated entry, signing in, focus, dragging and text alternatives), each result recorded as pass, fail, not applicable or not shown with its criterion, and a list of built-product checks for `check-implementation`. `promote-wireframes` and the README link to it.
 - Repository scaffold and Project Workflows adoption: review README, AGENTS and the workflow configuration.
 
 ## Done

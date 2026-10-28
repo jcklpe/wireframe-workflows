@@ -23,6 +23,7 @@ The collection has three kinds of material:
 | [explore-wireframe-options](explore-wireframe-options/SKILL.md) | Showing several options for a design question |
 | [map-user-flows](map-user-flows/SKILL.md) | Working out how someone reaches a goal before its screens are built |
 | [promote-wireframes](promote-wireframes/SKILL.md) | Copying finished work into Prototype |
+| [audit-wcag](audit-wcag/SKILL.md) | Checking wireframes against the WCAG criteria a design can show |
 | [update-wireframe-workflows](update-wireframe-workflows/SKILL.md) | Bringing a project's adoption up to date with the shared collection |
 
 ## References

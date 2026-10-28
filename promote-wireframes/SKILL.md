@@ -20,7 +20,7 @@ Check the Workshop boards, and report every failure with the board it concerns:
 - **Library use:** components come from the Component Library rather than local copies, and colors and type come from design tokens.
 - **Example content:** made-up content follows the [example content policy](../policies/example-content.md).
 
-Stop until each failure is fixed or the user explicitly accepts it as a known gap. Accepted gaps go into the change note. Run `audit-wcag` as well when the project asks for it.
+Stop until each failure is fixed or the user explicitly accepts it as a known gap. Accepted gaps go into the change note. Run [audit-wcag](../audit-wcag/SKILL.md) as well when the project asks for it.
 
 ## 3. Propose the plan
 Show the user one short list: the boards to copy, the Prototype boards they replace, links to update, Showroom screens the change affects, and the version name, such as "Promote: search results". Wait for approval.
