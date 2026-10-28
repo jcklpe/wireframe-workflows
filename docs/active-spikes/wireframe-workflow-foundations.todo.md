@@ -13,10 +13,8 @@ This repository is public. Skills and examples use synthetic content; consuming 
 
 ## To Do
 - Draft the remaining skills, one at a time and each reviewed by the user before committing, keeping them tool-agnostic and plain-language with the skill-authoring guidance. Validate frontmatter and links for each:
-  - `present-wireframes`.
   - `update-wireframe-workflows`, mirroring `update-project-workflows`. Then link to it from `setup-wireframe-workflows`.
   - `map-user-flows`.
-  - `populate-example-data`.
   - `audit-wcag`.
   - `spec-wireframes`.
   - `check-implementation`.
@@ -25,12 +23,13 @@ This repository is public. Skills and examples use synthetic content; consuming 
 - Apply the taxonomy to the Landlord Mapper Wireframes file: add Cover and Prototype pages, promote the current-state boards from Workshop into Prototype (copying them, so Workshop keeps them as the starting point for new work), order the pages, and add `design-files.json` to that repository, referencing its existing token export manifest. This changes a shared design file, so it needs the user's OK; track it in that project's repository.
 - Decide how a project declares which pages its repository exports come from, in `design-files.json` or its tool-specific export manifest.
 - Have `use-penpot` read `design-files.json` to find a project's file and page roles, and explain how Penpot stores file metadata for the link back to the repository.
-- Publication, which is the user's action: create the GitHub repository `jcklpe/wireframe-workflows`, push `main`, and push the `project/wireframe-workflows` branch to the Project Workflows remote. Then verify a fresh recursive clone, and publish the configs pin.
+- Publication, which is the user's action: create the GitHub repository `jcklpe/wireframe-workflows`, push `main`, and push the `project/wireframe-workflows` branch to the Project Workflows remote, then verify a fresh recursive clone. The configs repository is already published with this submodule registered, so its recursive clones fail on this submodule until the repository exists.
 
 ## Ready for Human QA
-- README: page taxonomy, how the pages work together, agent boundaries, the design-tool capability list, the `design-files.json` manifest and adoption.
-- `setup-wireframe-workflows` draft: adoption, linking the project to its design files through the manifest, checking the design tool, setting up pages and the Cover, and verification.
-- `build-wireframes` draft: Workshop-only scope, reading before building, reusing components and tokens, one connected prototype, states as you go, names by role, labelled example content, and checking and reporting.
+- Policies: pages and agent boundaries (with naming), working in Workshop, Showroom and example content.
+- README: policies, skills and references (the design-tool capability list and the `design-files.json` manifest), and adoption.
+- `setup-wireframe-workflows` draft: adoption, linking the project to its design files through the manifest, routing agents to the policies, checking the design tool, setting up pages and the Cover, and verification.
+- `build-wireframes` draft: the everyday loop that applies the policies: take the request, read the current state, choose the path (build, ask, map the flow, explore options or propose a Component Library part), build in Workshop, check, report and loop.
 - `explore-wireframe-options` draft: framing the question, fair side-by-side options in Scratchpad, presenting trade-offs and waiting for the choice, folding it into Workshop, and recording and retiring the decision.
 - `promote-wireframes` draft: checks before copying (states, dead ends, library use, example content), an approved plan, copying into Prototype with retargeted links, a named version, a change note, flagging affected Showroom screens, and refreshing the project's copies.
 - Repository scaffold and Project Workflows adoption: review README, AGENTS and the workflow configuration.

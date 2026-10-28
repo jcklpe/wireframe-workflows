@@ -1,37 +1,30 @@
 # Wireframe Workflows
 Reusable agent skills for wireframing with agents: how a design file's pages are organized, how ideas are explored and folded into work in progress, how finished work is promoted into a navigable prototype, and how it is presented. The procedures are tool-agnostic. Mechanics for a particular design tool, such as connecting to it, running its commands or exporting from it, belong to that tool's own skills, for example Agent Hands' `use-penpot` or the Figma MCP.
 
-**Status:** early. The first skill, [setup-wireframe-workflows](setup-wireframe-workflows/SKILL.md), is drafted; the rest are planned in the [foundations spike](docs/active-spikes/wireframe-workflow-foundations.md).
+**Status:** early. More skills are planned in the [foundations spike](docs/active-spikes/wireframe-workflow-foundations.md).
 
-## Pages
-Every wireframe file uses these pages, in this order: the shared pages first, then the working pages.
+The collection has three kinds of material:
 
-| Page | What it is for |
+- **Policies** are rules that hold whenever anyone, person or agent, works in a wireframe file. An adopting project's instructions tell agents to read them before touching the design file.
+- **Skills** are procedures an agent follows when a request calls for them.
+- **References** define the formats and contracts the skills rely on.
+
+## Policies
+- [Pages and agent boundaries](policies/pages.md): the six pages, how they work together, who may change what, and naming by role.
+- [Working in Workshop](policies/workshop.md): how changes to the work-in-progress prototype are made.
+- [Showroom](policies/showroom.md): how the curated walkthrough is kept.
+- [Example content](policies/example-content.md): realistic, labelled, made-up content.
+
+## Skills
+| Skill | Used when |
 | --- | --- |
-| Cover | A short, plain-language guide to the file: what it is, one line per page, and start links into Prototype and Showroom. It can double as the file's thumbnail. |
-| Showroom | A guided, linear walkthrough of the design for stakeholders, like a slide deck, with narrative, annotations and research citations. It is curated, not generated. |
-| Prototype | The cleaned-up version of Workshop: finished work that anyone can click through without hitting dead ends or rough edges. It depends only on the Component Library. A stable starting point can live here. |
-| Workshop | The work-in-progress prototype: ideally one prototype that covers everything, finished and unfinished. |
-| Scratchpad | Divergent options and in-between variations, such as three approaches to one idea side by side. |
-| Component Library | The components the other pages use. |
+| [setup-wireframe-workflows](setup-wireframe-workflows/SKILL.md) | Adopting the collection, linking a project to its design files, or setting up a file's pages |
+| [build-wireframes](build-wireframes/SKILL.md) | Everyday design work: the loop through Workshop, Scratchpad and the Component Library |
+| [explore-wireframe-options](explore-wireframe-options/SKILL.md) | Showing several options for a design question |
+| [promote-wireframes](promote-wireframes/SKILL.md) | Copying finished work into Prototype |
 
-A project can use different page names when it already has them; its instructions record the mapping.
-
-## How the pages work together
-- **Scratchpad and Workshop work as a pair.** Work happens in Workshop. When a design question comes up, options go into Scratchpad, labelled A, B, C. The chosen option is folded into Workshop, and the question, options and reasoning are recorded.
-- **Promotion copies finished work into Prototype.** Workshop keeps working; Prototype changes only through promotion, a deliberate step: check that every needed state exists and that nothing dead-ends, copy the boards, save a named version, write a change note and refresh the project's exports.
-- **Showroom is curated.** It tells the design's story to stakeholders, so it changes deliberately rather than automatically. Promotion flags Showroom screens that show changed work; updating them is a choice. Screens shown in Showroom are copies marked with the Prototype screen they came from, with links that open that screen in Prototype.
-
-## Agent boundaries
-These are provisional and expected to change with experience. Design tools generally cannot enforce them, so agents follow them as rules.
-
-- Scratchpad: agents create options freely when asked to explore.
-- Workshop: agents change it on request.
-- Component Library: only with an explicit task, because changes ripple to every page.
-- Prototype: only through promotion, never edited in place.
-- Showroom: only when working on the presentation at the user's request, never automatically.
-
-## What the skills need from a design tool
+## References
+### What the skills need from a design tool
 The skills describe what to do; a design tool's own skill describes how. A tool skill supports this collection by explaining how to do each of the following, under these names:
 
 - **List and create pages**, and change their order.
@@ -45,7 +38,7 @@ The skills describe what to do; a design tool's own skill describes how. A tool 
 
 When a tool cannot do one of these, the skill that needs it says so and falls back to asking the user to do that step by hand.
 
-## Linking a project to its design files
+### Linking a project to its design files
 Design files live in the cloud, while a project's documents and exports live in its repository. A `design-files.json` manifest at the root of the folder the design work belongs to, usually the repository root, connects the two. Agents and tools read it to find the right file, to know which page plays which role, and to know where local copies belong.
 
 ```json
@@ -84,7 +77,7 @@ Design files live in the cloud, while a project's documents and exports live in 
 Paths are relative to the manifest's folder. The manifest holds no credentials; file and team identifiers are not secrets, and opening a file still requires access in the design tool. In the other direction, the Cover page links back to the repository, and a tool that can store file metadata also records the repository's address in the file itself.
 
 ## Adopting
-A project adopts this collection as a pinned, root-level `wireframe-workflows/` Git submodule on a project-specific branch, the same way it adopts [Project Workflows](https://github.com/jcklpe/project-workflows). [setup-wireframe-workflows](setup-wireframe-workflows/SKILL.md) walks through adoption and sets up the design file.
+A project adopts this collection as a pinned, root-level `wireframe-workflows/` Git submodule on a project-specific branch, the same way it adopts [Project Workflows](https://github.com/jcklpe/project-workflows). [setup-wireframe-workflows](setup-wireframe-workflows/SKILL.md) walks through adoption, adds the routing that tells agents to read the policies, and sets up the design file.
 
 ## Developing this collection
 This repository is the project root for its own development. It adopts Project Workflows at `project-workflows/` for its documentation and work process; [AGENTS.md](AGENTS.md) explains how. Clone with submodules:

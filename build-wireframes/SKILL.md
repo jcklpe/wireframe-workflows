@@ -1,34 +1,22 @@
 ---
 name: build-wireframes
-description: "Build or change screens and flows in a wireframe file's Workshop page: add a route, extend a flow, add states or revise existing screens, reusing the file's components and tokens and keeping the work-in-progress prototype clickable. Use for everyday wireframing requests such as \"add this route to the wireframes\" or \"change how search results look\"."
+description: "Run the everyday wireframing loop: take a request, work it in Workshop, branch into Scratchpad options, the Component Library or flow mapping when the work calls for it, and bring the result back into one connected work-in-progress prototype. Use for everyday requests such as \"add this route to the wireframes\" or \"change how search results look\"."
 ---
 
 # Build Wireframes
-Do the everyday design work in Workshop. Page purposes and agent boundaries are defined in the [collection README](../README.md); the project's instructions name its design tool, its file and any page names that differ.
+The engine for everyday design work. The rules for each page live in the policies; this skill is the order in which they come into play. Read [pages and agent boundaries](../policies/pages.md), [working in Workshop](../policies/workshop.md) and [example content](../policies/example-content.md) first. The project's `design-files.json` names the file and its pages, and the tool skill handles the mechanics.
 
-## Scope and authority
-Work in Workshop only, unless the user names another page. Prototype changes only through promotion, Showroom only through presentation work, and the Component Library only with an explicit task, because every page uses it.
+## The loop
+1. **Take the request.** Restate what is being asked in a sentence, and find where it lands in Workshop: which flow, which screens.
+2. **Read the current state.** Look at the affected part of Workshop, how it connects, and what the Component Library and tokens offer. Change nothing yet.
+3. **Choose the path.**
+   - The request is clear: build it in Workshop (step 4).
+   - The route through the product is unclear: map it first with `map-user-flows`.
+   - A design question has one likely answer: ask the user.
+   - A design question has several reasonable answers: lay them out with `explore-wireframe-options`, then build the user's choice.
+   - The work needs a reusable part the library lacks: draft it locally in Workshop now, and propose the Component Library change as its own task. Once the user approves and the part exists, swap the local draft for the component.
+4. **Build in Workshop.** Make the change in small steps, linked into its flow, with its states considered, and with names by role and labelled example content.
+5. **Check.** Export the changed boards as images and look at them. Read where each new link leads.
+6. **Report and continue.** Say what changed, where it connects, which questions and states are still open, and what was proposed for the Component Library. Then take the next request, or loop back to step 3 for anything left open.
 
-Many design tools apply changes immediately, and collaborators see them live. Work in small steps, describe larger changes before making them, and save a named version before a big batch. Follow the tool skill for the mechanics of each step.
-
-## 1. Understand the request
-Read the project's "Wireframes" instructions and the request. Then read the current state of Workshop without changing anything: the screens and flows that already exist, how they connect, and what the Component Library and design tokens offer.
-
-When something about the request is unclear, ask a specific design question rather than guessing. When a question has several reasonable answers, offer to lay them out as options in Scratchpad with `explore-wireframe-options`, then build whichever the user picks.
-
-## 2. Build
-- **Reuse before inventing.** Build from Component Library components and the file's design tokens. When a screen needs a reusable part that does not exist, draw it locally in Workshop and propose adding it to the Component Library as a separate task.
-- **Keep one connected prototype.** Link each new screen into the flow it belongs to. Every button and link should lead somewhere, or be clearly marked as not designed yet. Do not leave stray boards that nothing links to.
-- **Cover the states as you go.** For each screen, consider what it shows when it is empty, loading, in error or successful, plus any state the flow implies. Build the ones in scope and list the rest as open.
-- **Name things by role.** Board names say the flow or area, the screen, the state and, when it matters, the viewport, for example "Search · Results · Empty · Mobile". Layer and group names describe what an element is for, not how it looks.
-- **Label example content.** Use believable content that is clearly made up, and say so on the board or in its notes. Never use real personal records.
-
-## 3. Check and report
-Export the boards you changed as images and look at them. Click-check the new links by reading where each one leads. Then report:
-
-- which screens and states were added or changed;
-- where they connect in the flow;
-- design questions still open, and states listed but not built;
-- any reusable part proposed for the Component Library.
-
-When a flow is finished and the user agrees, it is ready for promotion with `promote-wireframes`.
+When a flow is finished and the user agrees, hand it to `promote-wireframes`.

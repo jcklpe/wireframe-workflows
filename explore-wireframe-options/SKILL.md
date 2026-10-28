@@ -4,7 +4,7 @@ description: "Lay out several design options side by side in a wireframe file's 
 ---
 
 # Explore Wireframe Options
-Answer a design question by showing options instead of guessing. Page purposes and agent boundaries are defined in the [collection README](../README.md); the project's `design-files.json` names the file and its pages.
+Answer a design question by showing options instead of guessing. Page rules are in [pages and agent boundaries](../policies/pages.md), and made-up content follows the [example content policy](../policies/example-content.md); the project's `design-files.json` names the file and its pages.
 
 ## Scope and authority
 Scratchpad is the one page where the agent may sketch freely. Read Workshop, but change it only once the user has chosen. Leave Prototype, Showroom and the Component Library alone.

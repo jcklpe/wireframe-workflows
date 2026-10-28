@@ -4,7 +4,7 @@ description: "Adopt Wireframe Workflows in a project, link the project to its cl
 ---
 
 # Setup Wireframe Workflows
-Set up a project to use this collection and give its design file the standard structure. The pages, how they work together and what the skills need from a design tool are defined once in the [collection README](../README.md); read it first.
+Set up a project to use this collection and give its design file the standard structure. The pages and their rules are defined in [pages and agent boundaries](../policies/pages.md); what the skills need from a design tool and the manifest format are in the [collection README's references](../README.md#references). Read both first.
 
 ## Scope and authority
 Read the project's instructions first; they override these defaults. A setup request covers adopting the collection locally and setting up the named design file. It does not cover publishing, pushing, changing who can access the file, or deleting anything.
@@ -27,7 +27,7 @@ Skip this when the project already pins the collection; use `update-wireframe-wo
 ## 2. Link the project to its design files
 Create or update `design-files.json` at the root of the folder the design work belongs to, usually the repository root, in the [manifest format](../README.md#linking-a-project-to-its-design-files). Record each design file the project uses: its name, tool, URL and file ID, and where the project keeps local copies. Fill in the page roles in step 4. Preserve existing entries and any existing tool-specific manifest, such as a token export manifest; point to it from `local` rather than duplicating it.
 
-Add a short "Wireframes" section to the project's instructions, usually `AGENTS.md`, that points to the manifest, names the skill that operates each tool (for example Penpot through Agent Hands' `use-penpot`) and points to this collection's README for page purposes and agent boundaries.
+Add a short "Wireframes" section to the project's instructions, usually `AGENTS.md`, that points to the manifest, names the skill that operates each tool (for example Penpot through Agent Hands' `use-penpot`), and tells agents to read this collection's policies in `wireframe-workflows/policies/` before changing the design file. Project-specific variations go in the project's own policies.
 
 Ask before committing file identifiers to a public repository if the user has not already published them.
 

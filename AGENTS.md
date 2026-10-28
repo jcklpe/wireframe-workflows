@@ -8,8 +8,10 @@ Use [run-project-spike](project-workflows/run-project-spike/SKILL.md) for scoped
 
 The workflow project branch is `project/wireframe-workflows`, based on shared `main`. Select it before editing the child; verify rather than reset an existing branch. This repository pins the exact child revision. Repository routing does not install skills into clients or prove automatic discovery.
 
-## Writing skills
-Skills live directly at the repository root as `<skill-name>/SKILL.md`, named verb-first (for example `structure-wireframes`). Keep them tool-agnostic and plain-language; where a step depends on a design tool, name the capability needed and point to the tool skill that provides it. Name pages, tokens and other semantic structures by their role, not by how they currently look. Examples use synthetic content.
+## Writing skills and policies
+Rules that must hold whenever anyone works in a design file are policies in `policies/`; procedures that run when a request calls for them are skills. Skills link to the policies rather than restating them.
+
+Skills live directly at the repository root as `<skill-name>/SKILL.md`, named verb-first (for example `build-wireframes`). Keep skills and policies tool-agnostic and plain-language; where a step depends on a design tool, name the capability needed and point to the tool skill that provides it. Name pages, tokens and other semantic structures by their role, not by how they currently look. Examples use synthetic content.
 
 ## Git and privacy
 Agents may make scoped local commits by explicit pathspec after checking ignores; never force-add, rewrite history unprompted, add co-author trailers, or push. Commit workflow changes in the child first, then record its exact gitlink here. This is a public repository: never commit credentials, private project details or personal machine paths.

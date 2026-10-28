@@ -4,7 +4,7 @@ description: "Promote finished work from a wireframe file's Workshop into Protot
 ---
 
 # Promote Wireframes
-Copy finished work into Prototype, the page people and coding agents treat as the current design. Workshop stays the work-in-progress prototype; Prototype is its cleaned-up version, without dead ends or rough edges. Prototype changes only through this skill. Page purposes are defined in the [collection README](../README.md); the project's `design-files.json` names the file, its pages and where local copies live.
+Copy finished work into Prototype, the page people and coding agents treat as the current design. Workshop stays the work-in-progress prototype; Prototype is its cleaned-up version, without dead ends or rough edges. Prototype changes only through this skill. Page rules are in [pages and agent boundaries](../policies/pages.md); the project's `design-files.json` names the file, its pages and where local copies live.
 
 ## Scope and authority
 Promote only what the user has said is ready, and only after they approve the plan in step 3. Changes to Prototype are shared and usually apply immediately, so check before copying anything and verify after. Never edit Prototype boards in place outside a promotion, and never delete boards; superseded work stays restorable through the file's version history. Showroom is curated for presenting to stakeholders, so promotion does not change it.
@@ -18,7 +18,7 @@ Check the Workshop boards, and report every failure with the board it concerns:
 - **States:** each screen has the states its flow needs, such as empty, loading, error and success, plus any the flow implies.
 - **No dead ends:** every button and link leads to a board that will exist in Prototype after the copy, and every board is reachable from the flow's start.
 - **Library use:** components come from the Component Library rather than local copies, and colors and type come from design tokens.
-- **Example content:** made-up content is labelled as such, and no real personal records appear.
+- **Example content:** made-up content follows the [example content policy](../policies/example-content.md).
 
 Stop until each failure is fixed or the user explicitly accepts it as a known gap. Accepted gaps go into the change note. Run `audit-wcag` as well when the project asks for it.
 
@@ -34,7 +34,7 @@ Show the user one short list: the boards to copy, the Prototype boards they repl
 ## 5. Record the promotion
 - **Save a named version** with the name from the plan.
 - **Write a change note:** which screens and states were added, changed or removed, the decisions behind them (linking any recorded decision notes), and any accepted gaps. Coding agents read this to know what to build next.
-- **Flag Showroom:** list the Showroom screens that show something this promotion changed. Updating them is the user's choice, usually with `present-wireframes`.
+- **Flag Showroom:** list the Showroom screens that show something this promotion changed. Updating them is the user's choice, following the [Showroom policy](../policies/showroom.md).
 
 ## 6. Refresh the project's copies
 Refresh the local copies listed in `design-files.json`, such as the native archive, image exports and design tokens, through the tool skill, and the specs through `spec-wireframes` when the project uses them, all from the promoted state. Use the change note as the body of the project's commit, follow its commit policy, and never push.
