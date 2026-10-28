@@ -12,7 +12,7 @@ Read the project's instructions first; they override these defaults. A setup req
 A design file is usually shared, and many design tools apply changes immediately with no undo for collaborators. Inspect the file read-only, then show the user the exact pages you will add, rename or reorder, and what the Cover will say, before changing anything. Never delete pages or boards, or move existing boards between pages, unless the user asks for that specifically.
 
 ## 1. Adopt the collection
-Skip this when the project already pins the collection; use `update-wireframe-workflows` to change an existing adoption instead.
+Skip this when the project already pins the collection; use [update-wireframe-workflows](../update-wireframe-workflows/SKILL.md) to change an existing adoption instead.
 
 1. Inspect the project's Git state, existing submodules and current instructions. Preserve concurrent work.
 2. Add the collection as a root-level submodule from its public URL, then create a project branch inside it from `main`:

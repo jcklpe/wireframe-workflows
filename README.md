@@ -22,6 +22,7 @@ The collection has three kinds of material:
 | [build-wireframes](build-wireframes/SKILL.md) | Everyday design work: the loop through Workshop, Scratchpad and the Component Library |
 | [explore-wireframe-options](explore-wireframe-options/SKILL.md) | Showing several options for a design question |
 | [promote-wireframes](promote-wireframes/SKILL.md) | Copying finished work into Prototype |
+| [update-wireframe-workflows](update-wireframe-workflows/SKILL.md) | Bringing a project's adoption up to date with the shared collection |
 
 ## References
 ### What the skills need from a design tool
