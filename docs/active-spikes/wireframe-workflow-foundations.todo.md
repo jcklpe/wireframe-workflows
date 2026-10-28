@@ -13,14 +13,20 @@ This repository is public. Skills and examples use synthetic content; consuming 
 
 ## To Do
 - Write the canonical page taxonomy into the collection README, for every skill to link to.
-- Draft the first set of skills, one at a time and each reviewed by the user before committing, keeping them tool-agnostic and plain-language with the skill-authoring guidance. Validate frontmatter and links for each:
+- Write `design-tool-capabilities.md` at the collection root: the plain list of what the skills need from a design tool.
+- Draft the skills, one at a time and each reviewed by the user before committing, keeping them tool-agnostic and plain-language with the skill-authoring guidance. Validate frontmatter and links for each:
   - `setup-wireframe-workflows` first, since every other skill assumes the structure it establishes.
   - `build-wireframes`.
   - `explore-wireframe-options`.
   - `promote-wireframes`.
   - `present-wireframes`.
   - `update-wireframe-workflows`, mirroring `update-project-workflows`.
-- Answer the Penpot questions through `use-penpot`'s tooling: copying boards between pages, whether prototype links are limited to one page, and reading interactions for a dead-end check. Record the findings in Agent Hands, not here.
+  - `map-user-flows`.
+  - `populate-example-data`.
+  - `audit-wcag`.
+  - `spec-wireframes`.
+  - `check-implementation`.
+- In Agent Hands, add `use-penpot/references/wireframe-workflows.md`, mapping the design-tool capabilities to Penpot mechanics. Answer the Penpot questions there: copying boards between pages, whether prototype links are limited to one page, and reading interactions for the state and dead-end checks.
 - Apply the taxonomy to the Landlord Mapper Wireframes file: add Cover and Prototype pages, move the current-state boards from Workshop to Prototype, and order the pages. This changes a shared design file, so it needs the user's OK; track it in that project's repository.
 - Decide how a consuming project declares which pages its repository exports come from, alongside its existing export manifest.
 - Write adoption instructions in the README alongside `setup-wireframe-workflows` and `update-wireframe-workflows`.

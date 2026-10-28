@@ -45,18 +45,25 @@ There is no standard page structure. Teams commonly mix pages that track progres
 For agents, published guidance prescribes no page layout. It converges on making files readable node by node, with real components, tokens, auto layout and meaningful layer names, and on writing conventions into a skill or rules file the agent reads before touching the canvas ([let's dev](https://letsdev.de/en/blog/mcp-figma-design-to-code-optimize-ai-workflows), [LogRocket](https://blog.logrocket.com/ux-design/design-to-code-with-figma-mcp/), [Abduzeedo on agents writing to Figma](https://abduzeedo.com/node/89190)). This collection is that rules layer.
 
 ## Skill map
-Adopted by the user on 2026-10-27 as the first set. Skills are named verb-first, and the page taxonomy is defined once in the collection README, which each skill links to.
+Adopted by the user on 2026-10-27. Skills are named verb-first, and the page taxonomy is defined once in the collection README, which each skill links to. Development is moving toward fully agentic implementation, so the readers of finished wireframes are coding agents rather than developers looking at screens; the skills produce material those agents can consume.
 
 | Skill | Used when | Role |
 | --- | --- | --- |
 | `setup-wireframe-workflows` | Starting a design file, or tidying an existing one | Adopts the collection in a project and creates or retrofits the file's pages, Cover and page order. Mirrors `setup-project-workflows`. Every other skill assumes the structure it establishes. |
 | `build-wireframes` | "Add this route to the wireframes" | The everyday work in Workshop: reuse Component Library parts and tokens, keep the prototype clickable as it grows, and ask a design question instead of guessing. |
-| `explore-wireframe-options` | "Show me three ways to do X" | The Scratchpad loop: labelled options side by side, the chosen one folded into Workshop, the rest clearly retired. The only place the agent may make a mess freely. |
-| `promote-wireframes` | "This flow is done" | The only skill that changes Prototype: move the boards, check for dead ends, refresh Showroom copies, save a named version and trigger the repository exports. |
+| `explore-wireframe-options` | "Show me three ways to do X" | The Scratchpad loop: labelled options side by side, the chosen one folded into Workshop, the rest clearly retired. Records the question, the options and the user's reasoning for the choice. The only place the agent may make a mess freely. |
+| `promote-wireframes` | "This flow is done" | The only skill that changes Prototype: move the boards, check that every needed state (empty, loading, error, success) exists and that there are no dead ends, refresh Showroom copies, save a named version, write a short "what changed" note and trigger the repository exports and specs. |
 | `present-wireframes` | "Make a walkthrough for the meeting" | Builds and maintains the Showroom: story order, annotations, research citations and links into Prototype. Separate from promotion, because a walkthrough can change without promoting anything. |
 | `update-wireframe-workflows` | The collection improves and a project should catch up | Ancestry-aware updates for adopting projects. Mirrors `update-project-workflows`, and is part of the first set so adoption and updates work from the start. |
+| `map-user-flows` | "Work out how someone gets from search to a result" | Turns requirements or research into a flow map, usually in Scratchpad, before screens are built. |
+| `populate-example-data` | Wireframes need believable content | Fills screens with realistic, clearly labelled made-up data, including awkward cases such as long names, missing values and zero results. |
+| `audit-wcag` | Checking accessibility | Checks what a wireframe can show: text and background contrast from tokens, text and touch-target sizes, heading order, form labels and errors, and marked focus order and alternative text. Each check cites its WCAG criterion and records pass, fail or not applicable. |
+| `spec-wireframes` | Prototype screens are ready to build | Writes a structured spec per Prototype screen for coding agents: purpose, route, components and tokens, states, where each interaction leads, copy and data fields, and links to image exports. Specs live in the project's repository beside its exports and refresh on promotion. |
+| `check-implementation` | Something has been built from the wireframes | Compares the running product against Prototype and its specs and lists the differences, closing the loop from design to coding agent to verified build. |
 
-The Component Library, review/QA and exports are handled inside `build-wireframes`, `promote-wireframes` and the tool skills until a clear need for a separate skill appears.
+**Design-tool capabilities** is a shared reference rather than a skill, because no request triggers it on its own. `design-tool-capabilities.md` at the collection root lists what the skills need from any design tool: list pages and copy boards between them, export board images, read prototype links, read and write tokens, and save named versions. Each tool skill provides a matching reference that maps those capabilities to its own mechanics, for example `use-penpot/references/wireframe-workflows.md` in Agent Hands. Token sync and applying a design system stay in the tool skills behind that reference. `setup-wireframe-workflows` records which tool a project uses and checks that its mapping covers the list.
+
+Component Library upkeep and exports are handled inside `build-wireframes`, `promote-wireframes` and the tool skills until a clear need for a separate skill appears.
 
 ## Agent proposals not yet decided
 - **Version history instead of an Archive page.** A named version at each promotion keeps superseded work restorable without a graveyard page.
