@@ -1,6 +1,6 @@
 ---
 name: setup-wireframe-workflows
-description: "Adopt Wireframe Workflows in a project and set up its design file: the standard pages, the Cover, page order and the design tool used. Use when starting a wireframe file, reorganizing an existing file into the standard pages, or adopting this collection in a project."
+description: "Adopt Wireframe Workflows in a project, link the project to its cloud design files, and set up a file's standard pages, Cover and page order. Use when starting a wireframe file, reorganizing an existing file into the standard pages, connecting a repository to a design file, or adopting this collection in a project."
 ---
 
 # Setup Wireframe Workflows
@@ -24,25 +24,22 @@ Skip this when the project already pins the collection; use `update-wireframe-wo
 
 3. Record the project branch in `.gitmodules`, follow the project's commit policy, and never push. A local branch is not available to collaborators until someone publishes it.
 
-## 2. Record the project's choices
-Add a short "Wireframes" section to the project's instructions, usually `AGENTS.md`, with:
+## 2. Link the project to its design files
+Create or update `design-files.json` at the root of the folder the design work belongs to, usually the repository root, in the [manifest format](../README.md#linking-a-project-to-its-design-files). Record each design file the project uses: its name, tool, URL and file ID, and where the project keeps local copies. Fill in the page roles in step 4. Preserve existing entries and any existing tool-specific manifest, such as a token export manifest; point to it from `local` rather than duplicating it.
 
-- the design tool and the skill that operates it, for example Penpot through Agent Hands' `use-penpot`;
-- a link to the hosted design file;
-- any page names that differ from the standard ones, mapped to their standard roles;
-- a pointer to this collection's README for page purposes and agent boundaries.
+Add a short "Wireframes" section to the project's instructions, usually `AGENTS.md`, that points to the manifest, names the skill that operates each tool (for example Penpot through Agent Hands' `use-penpot`) and points to this collection's README for page purposes and agent boundaries.
 
-Keep identifiers out of the section if the repository is public and the user has not agreed to publish them.
+Ask before committing file identifiers to a public repository if the user has not already published them.
 
 ## 3. Check the design tool
-Read the tool skill and confirm it explains how to do each item in [what the skills need from a design tool](../README.md#what-the-skills-need-from-a-design-tool). Then confirm the agent can reach the intended file with one read-only call, for example by reading the file's name and its list of pages. Report any capability the tool lacks; the affected steps fall back to the user doing them by hand.
+Read the tool skill and confirm it explains how to do each item in [what the skills need from a design tool](../README.md#what-the-skills-need-from-a-design-tool). Then confirm the agent can reach the file named in the manifest with one read-only call, for example by reading the file's name and its list of pages, and check that the name matches the manifest. Report any capability the tool lacks; the affected steps fall back to the user doing them by hand.
 
 ## 4. Set up the pages
 1. Read the file's current pages and what is on each, without changing anything.
 2. Map existing pages to the standard roles. An existing page that already does a standard page's job keeps its content; propose a rename only if the user wants standard names.
 3. Propose the changes as one short list: pages to add, pages to rename, the new order, and the Cover's text. Wait for the user's approval.
-4. Make the approved changes through the tool skill. Add missing pages empty, apart from the Cover.
-5. Write the Cover: the file's name and purpose in one or two sentences, one plain line per page, and start links into Prototype and Showroom once they have content. Use the tool's ordinary text and links, not a template image.
+4. Make the approved changes through the tool skill. Add missing pages empty, apart from the Cover. Record the final page name for each role in the manifest's `pages`.
+5. Write the Cover: the file's name and purpose in one or two sentences, one plain line per page, start links into Prototype and Showroom once they have content, and a link back to the project repository. Use the tool's ordinary text and links, not a template image. When the tool can store file metadata, also record the repository's address in the file.
 
 ## 5. Verify and report
-List the pages again and compare them with the approved plan. Export the Cover as an image and check that it reads clearly. Report what was added, renamed and reordered, what is still empty, any capability gaps from step 3, and anything left unpublished, such as the collection's project branch.
+List the pages again and compare them with the approved plan and the manifest's `pages`. Export the Cover as an image and check that it reads clearly. Report what was added, renamed and reordered, what is still empty, any capability gaps from step 3, and anything left unpublished, such as the collection's project branch.

@@ -40,8 +40,47 @@ The skills describe what to do; a design tool's own skill describes how. A tool 
 - **Read and write design tokens.**
 - **Save a named version** of the file.
 - **Lock a board**, an optional guard for promoted work.
+- **Store file metadata**, optional, so the design file can record a link back to its project repository.
 
 When a tool cannot do one of these, the skill that needs it says so and falls back to asking the user to do that step by hand.
+
+## Linking a project to its design files
+Design files live in the cloud, while a project's documents and exports live in its repository. A `design-files.json` manifest at the root of the folder the design work belongs to, usually the repository root, connects the two. Agents and tools read it to find the right file, to know which page plays which role, and to know where local copies belong.
+
+```json
+{
+  "schema_version": 1,
+  "files": [
+    {
+      "name": "Wireframes",
+      "tool": "penpot",
+      "url": "https://design.example/workspace?file-id=11111111-2222-3333-4444-555555555555",
+      "file_id": "11111111-2222-3333-4444-555555555555",
+      "pages": {
+        "cover": "Cover",
+        "showroom": "Showroom",
+        "prototype": "Prototype",
+        "workshop": "Workshop",
+        "scratchpad": "Scratchpad",
+        "component_library": "Component Library"
+      },
+      "local": {
+        "archive": "Wireframes.penpot",
+        "exports": "exports/",
+        "tokens": "design-tokens/",
+        "export_manifest": "penpot-export.json"
+      }
+    }
+  ]
+}
+```
+
+- `files` lists every design file the project uses; most projects have one.
+- `name`, `tool`, `url` and `file_id` identify a file. `tool` names the design tool, such as `penpot` or `figma`, and so which tool skill operates it.
+- `pages` maps each standard role to the page's actual name in that file, so a project can keep its own names.
+- `local` is optional and says where the project keeps copies: a native archive, image exports, design tokens and any tool-specific export manifest.
+
+Paths are relative to the manifest's folder. The manifest holds no credentials; file and team identifiers are not secrets, and opening a file still requires access in the design tool. In the other direction, the Cover page links back to the repository, and a tool that can store file metadata also records the repository's address in the file itself.
 
 ## Adopting
 A project adopts this collection as a pinned, root-level `wireframe-workflows/` Git submodule on a project-specific branch, the same way it adopts [Project Workflows](https://github.com/jcklpe/project-workflows). [setup-wireframe-workflows](setup-wireframe-workflows/SKILL.md) walks through adoption and sets up the design file.

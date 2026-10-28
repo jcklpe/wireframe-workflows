@@ -65,6 +65,9 @@ Adopted by the user on 2026-10-27. Skills are named verb-first, and the page tax
 
 Component Library upkeep and exports are handled inside `build-wireframes`, `promote-wireframes` and the tool skills until a clear need for a separate skill appears.
 
+## Linking projects to design files
+Adopted by the user on 2026-10-27. Design files live in the cloud while project documents and exports live in a repository, so a project-owned `design-files.json` at the root of the folder the design work belongs to connects them. It lists each design file's name, tool, URL and file ID, maps each standard page role to the file's actual page name, and says where local copies such as archives, image exports, tokens and tool-specific export manifests live. Agents and tool skills read it instead of searching for the right file. In the other direction, the Cover links back to the repository, and a tool that can store file metadata records the repository's address in the file. The README defines the format, and `setup-wireframe-workflows` writes and checks it. An existing tool-specific manifest, such as Landlord Mapper's token export manifest, stays as it is and is referenced from `local`.
+
 ## Agent proposals not yet decided
 - **Version history instead of an Archive page.** A named version at each promotion keeps superseded work restorable without a graveyard page.
 - **Page order.** Published pages first (Cover, Showroom, Prototype), then working pages (Workshop, Scratchpad, Component Library).
@@ -74,8 +77,7 @@ Component Library upkeep and exports are handled inside `build-wireframes`, `pro
 - Can a design tool's API copy a board from one page to another? This decides whether Showroom sync can be automated in Penpot or needs a manual paste.
 - Are prototype links limited to boards on the same page? Figma's are; Penpot's are unverified.
 - What exactly should the dead-end check verify, and can it read prototype interactions through the tool's API?
-- Which pages should a project's repository exports come from? The likely answer is Prototype, with Showroom perhaps exported as a document; the consuming project's export manifest owns that choice.
-- How does a project adopt this collection, and does it need configuration of its own, as Project Workflows has `workflow.toml`? The setup draft records the project's choices in a "Wireframes" section of its instructions instead.
+- Which pages should a project's repository exports come from? The likely answer is Prototype, with Showroom perhaps exported as a document; the project's manifests own that choice.
 - How do teammates working in the same file coordinate and reconcile their work? Edits in tools like Penpot are live and shared, so the risk is less merge conflicts than coordination: who is working on which flow, several people's agents writing to one file at once, and who decides a promotion. This may need its own skill.
 
 ## Related work
