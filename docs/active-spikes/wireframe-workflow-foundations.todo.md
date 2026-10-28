@@ -13,7 +13,6 @@ This repository is public. Skills and examples use synthetic content; consuming 
 
 ## To Do
 - Draft the remaining skills, one at a time and each reviewed by the user before committing, keeping them tool-agnostic and plain-language with the skill-authoring guidance. Validate frontmatter and links for each:
-  - `build-wireframes`.
   - `explore-wireframe-options`.
   - `promote-wireframes`.
   - `present-wireframes`.
@@ -32,6 +31,7 @@ This repository is public. Skills and examples use synthetic content; consuming 
 ## Ready for Human QA
 - README: page taxonomy, how the pages work together, agent boundaries, the design-tool capability list and adoption.
 - `setup-wireframe-workflows` draft: adoption, recording the project's choices, checking the design tool, setting up pages and the Cover, and verification.
+- `build-wireframes` draft: Workshop-only scope, reading before building, reusing components and tokens, one connected prototype, states as you go, names by role, labelled example content, and checking and reporting.
 - Repository scaffold and Project Workflows adoption: review README, AGENTS and the workflow configuration.
 
 ## Done
