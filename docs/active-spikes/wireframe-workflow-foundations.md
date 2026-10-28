@@ -44,8 +44,23 @@ There is no standard page structure. Teams commonly mix pages that track progres
 
 For agents, published guidance prescribes no page layout. It converges on making files readable node by node, with real components, tokens, auto layout and meaningful layer names, and on writing conventions into a skill or rules file the agent reads before touching the canvas ([let's dev](https://letsdev.de/en/blog/mcp-figma-design-to-code-optimize-ai-workflows), [LogRocket](https://blog.logrocket.com/ux-design/design-to-code-with-figma-mcp/), [Abduzeedo on agents writing to Figma](https://abduzeedo.com/node/89190)). This collection is that rules layer.
 
+## Skill map
+Adopted by the user on 2026-10-27 as the first set. Skills are named verb-first, and the page taxonomy is defined once in the collection README, which each skill links to.
+
+| Skill | Used when | Role |
+| --- | --- | --- |
+| `setup-wireframe-workflows` | Starting a design file, or tidying an existing one | Adopts the collection in a project and creates or retrofits the file's pages, Cover and page order. Mirrors `setup-project-workflows`. Every other skill assumes the structure it establishes. |
+| `build-wireframes` | "Add this route to the wireframes" | The everyday work in Workshop: reuse Component Library parts and tokens, keep the prototype clickable as it grows, and ask a design question instead of guessing. |
+| `explore-wireframe-options` | "Show me three ways to do X" | The Scratchpad loop: labelled options side by side, the chosen one folded into Workshop, the rest clearly retired. The only place the agent may make a mess freely. |
+| `promote-wireframes` | "This flow is done" | The only skill that changes Prototype: move the boards, check for dead ends, refresh Showroom copies, save a named version and trigger the repository exports. |
+| `present-wireframes` | "Make a walkthrough for the meeting" | Builds and maintains the Showroom: story order, annotations, research citations and links into Prototype. Separate from promotion, because a walkthrough can change without promoting anything. |
+| `update-wireframe-workflows` | The collection improves and a project should catch up | Ancestry-aware updates for adopting projects. Mirrors `update-project-workflows`, and is part of the first set so adoption and updates work from the start. |
+
+Out of scope for this collection: reproducing an existing product's UI from its code, and inventorying a product's design tokens. Both happened in the Landlord Mapper work, but the user decided they are not part of this collection's skill set.
+
+The Component Library, review/QA and exports are handled inside `build-wireframes`, `promote-wireframes` and the tool skills until a clear need for a separate skill appears.
+
 ## Agent proposals not yet decided
-- **Start lean.** Write one skill first, `structure-wireframes`, covering the taxonomy, the Cover page and the agent boundaries. Add `explore-wireframe-options`, `promote-wireframes` and `present-wireframes` once those loops have been used for real.
 - **Version history instead of an Archive page.** A named version at each promotion keeps superseded work restorable without a graveyard page.
 - **Page order.** Published pages first (Cover, Showroom, Prototype), then working pages (Workshop, Scratchpad, Component Library).
 - **Entry boards.** A small board at the top of each page saying what the page is for, mainly for newcomers and agents.
