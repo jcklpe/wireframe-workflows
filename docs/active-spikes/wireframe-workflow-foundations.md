@@ -56,8 +56,6 @@ Adopted by the user on 2026-10-27 as the first set. Skills are named verb-first,
 | `present-wireframes` | "Make a walkthrough for the meeting" | Builds and maintains the Showroom: story order, annotations, research citations and links into Prototype. Separate from promotion, because a walkthrough can change without promoting anything. |
 | `update-wireframe-workflows` | The collection improves and a project should catch up | Ancestry-aware updates for adopting projects. Mirrors `update-project-workflows`, and is part of the first set so adoption and updates work from the start. |
 
-Out of scope for this collection: reproducing an existing product's UI from its code, and inventorying a product's design tokens. Both happened in the Landlord Mapper work, but the user decided they are not part of this collection's skill set.
-
 The Component Library, review/QA and exports are handled inside `build-wireframes`, `promote-wireframes` and the tool skills until a clear need for a separate skill appears.
 
 ## Agent proposals not yet decided
