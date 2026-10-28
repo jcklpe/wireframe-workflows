@@ -7,7 +7,7 @@ description: "Build or change screens and flows in a wireframe file's Workshop p
 Do the everyday design work in Workshop. Page purposes and agent boundaries are defined in the [collection README](../README.md); the project's instructions name its design tool, its file and any page names that differ.
 
 ## Scope and authority
-Work in Workshop only, unless the user names another page. Prototype and Showroom change only through promotion, and the Component Library changes only with an explicit task, because every page uses it.
+Work in Workshop only, unless the user names another page. Prototype changes only through promotion, Showroom only through presentation work, and the Component Library only with an explicit task, because every page uses it.
 
 Many design tools apply changes immediately, and collaborators see them live. Work in small steps, describe larger changes before making them, and save a named version before a big batch. Follow the tool skill for the mechanics of each step.
 

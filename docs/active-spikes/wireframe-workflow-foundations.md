@@ -16,18 +16,18 @@ Adopted by the user on 2026-10-27, with agent boundaries still provisional:
 | Page | Purpose |
 | --- | --- |
 | Cover | A concise, plain-language guide to the file's pages, with start links, for example into the prototype's view mode. It can double as the file's thumbnail. |
-| Showroom | A guided, linear, almost slide-deck walkthrough of the wireframes, with annotations and research citations. |
-| Prototype | Finished-ish work that people can click through freely without dead ends. Self-contained apart from its Component Library dependencies. A stable starting point, such as a reproduction of the current product, can live here. |
-| Workshop | Active, refined work: ideally a single all-encompassing prototype, still in progress. |
+| Showroom | A guided, linear, almost slide-deck walkthrough of the wireframes for stakeholders, with narrative, annotations and research citations. Curated, not generated. |
+| Prototype | The cleaned-up version of Workshop: finished-ish work that people can click through freely without dead ends or rough edges. Self-contained apart from its Component Library dependencies. A stable starting point, such as a reproduction of the current product, can live here. |
+| Workshop | The work-in-progress prototype: ideally a single all-encompassing prototype, finished and unfinished parts alike. |
 | Scratchpad | Intermediate and divergent variation, such as three approaches to one idea side by side. |
 | Component Library | The components the other pages use. |
 
 ## Working loops
 **Scratchpad and Workshop work together** (adopted). The user asks for something in Workshop, for example a new route. When the agent hits a design question, it asks; on request it lays out labelled options (A, B, C) in Scratchpad; the user picks one; the agent integrates the choice into Workshop.
 
-**Promotion is an explicit event** (agreed in principle; details open). Finished work moves from Workshop to Prototype in deliberate steps rather than through gradual edits to Prototype. A promotion moves the boards, refreshes whatever depends on Prototype, runs a dead-end check of its links, saves a named version in the design tool, and refreshes and commits the project's repository exports. The point is a Prototype that changes only at known moments, with a restorable design-tool version and a matching Git commit for each change.
+**Promotion is an explicit event that copies** (adopted). Finished work is copied from Workshop into Prototype in deliberate steps rather than through gradual edits to Prototype. Workshop stays the work-in-progress prototype, and Prototype is its cleaned-up version. A promotion checks states and links, copies the boards, saves a named version in the design tool, writes a change note, flags Showroom screens that show changed work, and refreshes and commits the project's repository exports. The point is a Prototype that changes only at known moments, with a restorable design-tool version and a matching Git commit for each change.
 
-**Showroom stays in sync with Prototype** (adopted). Showroom holds copies of Prototype screens, refreshed at each promotion and marked with the screen they came from, plus links that open the matching screen in Prototype's view mode. Making whole screens into components would give a live link, but it clutters the Component Library, so it is not the default.
+**Showroom is curated** (adopted). Showroom presents the design's narrative to stakeholders, so it changes deliberately rather than automatically. Promotion only flags Showroom screens that show changed work; updating them is the user's choice. Screens shown in Showroom are copies marked with the Prototype screen they came from, plus links that open that screen in Prototype's view mode. Making whole screens into components would give a live link, but it clutters the Component Library.
 
 ## Agent boundaries by page
 Provisional; the user expects to adjust these with experience:
@@ -35,7 +35,8 @@ Provisional; the user expects to adjust these with experience:
 - Scratchpad: the agent creates options freely when exploring at the user's request.
 - Workshop: changes on request.
 - Component Library: only with an explicit task, because changes ripple to every page.
-- Prototype and Showroom: changed only by promotion, never edited in place.
+- Prototype: changed only by promotion, never edited in place.
+- Showroom: changed only when working on the presentation at the user's request, never automatically.
 
 Design tools generally cannot enforce per-page permissions, so these rules live in the skill an agent reads first. Locking promoted boards can add a light guard.
 
@@ -52,7 +53,7 @@ Adopted by the user on 2026-10-27. Skills are named verb-first, and the page tax
 | `setup-wireframe-workflows` | Starting a design file, or tidying an existing one | Adopts the collection in a project and creates or retrofits the file's pages, Cover and page order. Mirrors `setup-project-workflows`. Every other skill assumes the structure it establishes. |
 | `build-wireframes` | "Add this route to the wireframes" | The everyday work in Workshop: reuse Component Library parts and tokens, keep the prototype clickable as it grows, and ask a design question instead of guessing. |
 | `explore-wireframe-options` | "Show me three ways to do X" | The Scratchpad loop: labelled options side by side, the chosen one folded into Workshop, the rest clearly retired. Records the question, the options and the user's reasoning for the choice. The only place the agent may make a mess freely. |
-| `promote-wireframes` | "This flow is done" | The only skill that changes Prototype: move the boards, check that every needed state (empty, loading, error, success) exists and that there are no dead ends, refresh Showroom copies, save a named version, write a short "what changed" note and trigger the repository exports and specs. |
+| `promote-wireframes` | "This flow is done" | The only skill that changes Prototype: check that every needed state (empty, loading, error, success) exists and that there are no dead ends, copy the boards, save a named version, write a short "what changed" note, flag affected Showroom screens and trigger the repository exports and specs. |
 | `present-wireframes` | "Make a walkthrough for the meeting" | Builds and maintains the Showroom: story order, annotations, research citations and links into Prototype. Separate from promotion, because a walkthrough can change without promoting anything. |
 | `update-wireframe-workflows` | The collection improves and a project should catch up | Ancestry-aware updates for adopting projects. Mirrors `update-project-workflows`, and is part of the first set so adoption and updates work from the start. |
 | `map-user-flows` | "Work out how someone gets from search to a result" | Turns requirements or research into a flow map, usually in Scratchpad, before screens are built. |
@@ -74,7 +75,7 @@ Adopted by the user on 2026-10-27. Design files live in the cloud while project 
 - **Entry boards.** A small board at the top of each page saying what the page is for, mainly for newcomers and agents.
 
 ## Open questions
-- Can a design tool's API copy a board from one page to another? This decides whether Showroom sync can be automated in Penpot or needs a manual paste.
+- Can a design tool's API copy a board from one page to another? Promotion depends on it, so it decides whether promotion can be automated in Penpot or needs a manual paste.
 - Are prototype links limited to boards on the same page? Figma's are; Penpot's are unverified.
 - What exactly should the dead-end check verify, and can it read prototype interactions through the tool's API?
 - Which pages should a project's repository exports come from? The likely answer is Prototype, with Showroom perhaps exported as a document; the project's manifests own that choice.

@@ -9,9 +9,9 @@ Every wireframe file uses these pages, in this order: the shared pages first, th
 | Page | What it is for |
 | --- | --- |
 | Cover | A short, plain-language guide to the file: what it is, one line per page, and start links into Prototype and Showroom. It can double as the file's thumbnail. |
-| Showroom | A guided, linear walkthrough of the design, like a slide deck, with annotations and research citations. |
-| Prototype | Finished work that anyone can click through without hitting dead ends. It depends only on the Component Library. A stable starting point can live here. |
-| Workshop | Active work in progress, ideally one prototype that covers everything being worked on. |
+| Showroom | A guided, linear walkthrough of the design for stakeholders, like a slide deck, with narrative, annotations and research citations. It is curated, not generated. |
+| Prototype | The cleaned-up version of Workshop: finished work that anyone can click through without hitting dead ends or rough edges. It depends only on the Component Library. A stable starting point can live here. |
+| Workshop | The work-in-progress prototype: ideally one prototype that covers everything, finished and unfinished. |
 | Scratchpad | Divergent options and in-between variations, such as three approaches to one idea side by side. |
 | Component Library | The components the other pages use. |
 
@@ -19,8 +19,8 @@ A project can use different page names when it already has them; its instruction
 
 ## How the pages work together
 - **Scratchpad and Workshop work as a pair.** Work happens in Workshop. When a design question comes up, options go into Scratchpad, labelled A, B, C. The chosen option is folded into Workshop, and the question, options and reasoning are recorded.
-- **Promotion moves finished work into Prototype.** Prototype changes only through promotion, a deliberate step: move the boards, check that every needed state exists and that nothing dead-ends, refresh Showroom's copies, save a named version, and refresh the project's exports.
-- **Showroom stays in step with Prototype.** Showroom holds copies of Prototype screens, refreshed at each promotion and marked with the screen they came from, plus links that open that screen in Prototype.
+- **Promotion copies finished work into Prototype.** Workshop keeps working; Prototype changes only through promotion, a deliberate step: check that every needed state exists and that nothing dead-ends, copy the boards, save a named version, write a change note and refresh the project's exports.
+- **Showroom is curated.** It tells the design's story to stakeholders, so it changes deliberately rather than automatically. Promotion flags Showroom screens that show changed work; updating them is a choice. Screens shown in Showroom are copies marked with the Prototype screen they came from, with links that open that screen in Prototype.
 
 ## Agent boundaries
 These are provisional and expected to change with experience. Design tools generally cannot enforce them, so agents follow them as rules.
@@ -28,7 +28,8 @@ These are provisional and expected to change with experience. Design tools gener
 - Scratchpad: agents create options freely when asked to explore.
 - Workshop: agents change it on request.
 - Component Library: only with an explicit task, because changes ripple to every page.
-- Prototype and Showroom: only through promotion, never edited in place.
+- Prototype: only through promotion, never edited in place.
+- Showroom: only when working on the presentation at the user's request, never automatically.
 
 ## What the skills need from a design tool
 The skills describe what to do; a design tool's own skill describes how. A tool skill supports this collection by explaining how to do each of the following, under these names:
