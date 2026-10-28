@@ -45,7 +45,7 @@ There is no standard page structure. Teams commonly mix pages that track progres
 For agents, published guidance prescribes no page layout. It converges on making files readable node by node, with real components, tokens, auto layout and meaningful layer names, and on writing conventions into a skill or rules file the agent reads before touching the canvas ([let's dev](https://letsdev.de/en/blog/mcp-figma-design-to-code-optimize-ai-workflows), [LogRocket](https://blog.logrocket.com/ux-design/design-to-code-with-figma-mcp/), [Abduzeedo on agents writing to Figma](https://abduzeedo.com/node/89190)). This collection is that rules layer.
 
 ## Skill map
-Adopted by the user on 2026-10-27. Skills are named verb-first, and the page taxonomy is defined once in the collection README, which each skill links to. Development is moving toward fully agentic implementation, so the readers of finished wireframes are coding agents rather than developers looking at screens; the skills produce material those agents can consume.
+Adopted by the user on 2026-10-27. Skills are named verb-first, and the page taxonomy is defined once in the collection README, which each skill links to. People use the wireframes to discuss the design. Implementation is moving to coding agents, so detailed build information goes to them as structured specs rather than annotated spec sheets for human developers.
 
 | Skill | Used when | Role |
 | --- | --- | --- |
@@ -61,7 +61,7 @@ Adopted by the user on 2026-10-27. Skills are named verb-first, and the page tax
 | `spec-wireframes` | Prototype screens are ready to build | Writes a structured spec per Prototype screen for coding agents: purpose, route, components and tokens, states, where each interaction leads, copy and data fields, and links to image exports. Specs live in the project's repository beside its exports and refresh on promotion. |
 | `check-implementation` | Something has been built from the wireframes | Compares the running product against Prototype and its specs and lists the differences, closing the loop from design to coding agent to verified build. |
 
-**Design-tool capabilities** is a shared reference rather than a skill, because no request triggers it on its own. `design-tool-capabilities.md` at the collection root lists what the skills need from any design tool: list pages and copy boards between them, export board images, read prototype links, read and write tokens, and save named versions. Each tool skill provides a matching reference that maps those capabilities to its own mechanics, for example `use-penpot/references/wireframe-workflows.md` in Agent Hands. Token sync and applying a design system stay in the tool skills behind that reference. `setup-wireframe-workflows` records which tool a project uses and checks that its mapping covers the list.
+**Design-tool capabilities** are a list in the collection README rather than a skill, because no request triggers them on their own. Each tool skill explains how it does each item under the same names, for example in Agent Hands' `use-penpot`. Token sync and applying a design system stay in the tool skills. `setup-wireframe-workflows` records which tool a project uses and checks that its skill covers the list. A machine-readable capability manifest is possible later if that check should be automated.
 
 Component Library upkeep and exports are handled inside `build-wireframes`, `promote-wireframes` and the tool skills until a clear need for a separate skill appears.
 
@@ -75,7 +75,8 @@ Component Library upkeep and exports are handled inside `build-wireframes`, `pro
 - Are prototype links limited to boards on the same page? Figma's are; Penpot's are unverified.
 - What exactly should the dead-end check verify, and can it read prototype interactions through the tool's API?
 - Which pages should a project's repository exports come from? The likely answer is Prototype, with Showroom perhaps exported as a document; the consuming project's export manifest owns that choice.
-- How does a project adopt this collection, and does it need configuration of its own, as Project Workflows has `workflow.toml`?
+- How does a project adopt this collection, and does it need configuration of its own, as Project Workflows has `workflow.toml`? The setup draft records the project's choices in a "Wireframes" section of its instructions instead.
+- How do teammates working in the same file coordinate and reconcile their work? Edits in tools like Penpot are live and shared, so the risk is less merge conflicts than coordination: who is working on which flow, several people's agents writing to one file at once, and who decides a promotion. This may need its own skill.
 
 ## Related work
 - **First consumer:** Texas-LandlordMapper-design. Its Wireframes file currently has Showroom, Workshop, Scratchpad and Component Library pages; Cover and Prototype are not yet added.
