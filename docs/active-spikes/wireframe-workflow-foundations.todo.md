@@ -14,7 +14,7 @@ This repository is public. Skills and examples use synthetic content; consuming 
 ## To Do
 - Apply the taxonomy to the Landlord Mapper Wireframes file: add Cover and Prototype pages, promote the current-state boards from Workshop into Prototype (copying them, so Workshop keeps them as the starting point for new work), order the pages, and add `design-files.json` to that repository, referencing its existing token export manifest. This changes a shared design file, so it needs the user's OK; track it in that project's repository.
 - Decide how a project declares which pages its repository exports come from, in `design-files.json` or its tool-specific export manifest.
-- Penpot follow-ups live in Agent Hands' `penpot-design-capabilities` spike: having `use-penpot` read `design-files.json`, and copying boards between pages through Penpot's backend API so that promotion and merging need no paste.
+- Penpot follow-ups live in Agent Hands' `penpot-design-capabilities` spike: having `use-penpot` read `design-files.json`, and deciding how promotion replaces an existing Prototype board.
 - Add a copy-and-paste prompt to the README that has an agent run `setup-wireframe-workflows`, and give setup a path for designers without Git that links the skills where their agent finds them.
 - Adopt the collection in a team project repository, with an instruction there that points agents to `setup-wireframe-workflows`. This writes to a shared repository, so it needs the user's go-ahead.
 - Draft a formatting and style policy for frames, covering board numbering for a tree or graph of screens and canvas layout, once the user's notes from earlier Figma work arrive.
