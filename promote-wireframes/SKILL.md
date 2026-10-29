@@ -1,19 +1,19 @@
 ---
 name: promote-wireframes
-description: "Promote finished work from a wireframe file's Workshop into Prototype as a deliberate, checked step: verify states and links, copy the boards, save a named version, write a change note, flag affected Showroom screens and refresh the project's exports. Use when the user says a flow is done or asks to promote it to Prototype."
+description: "Promote settled work from a wireframe file's Staging or Workshop into Prototype as a deliberate, checked step: verify states and links, copy the boards, save a named version, write a change note, flag affected Showroom screens and refresh the project's exports. Use when the user says a flow is done or asks to promote it to Prototype."
 ---
 
 # Promote Wireframes
-Copy finished work into Prototype, the page people and coding agents treat as the current design. Workshop stays the work-in-progress prototype; Prototype is its cleaned-up version, without dead ends or rough edges. Prototype changes only through this skill. Page rules are in [pages and agent boundaries](../policies/pages.md); the project's `design-files.json` names the file, its pages and where local copies live.
+Copy settled work into Prototype, the page people and coding agents treat as the current design. The work comes from Staging when the file has one and from Workshop otherwise; the source keeps its boards, and Prototype is the cleaned-up version without dead ends or rough edges. Prototype changes only through this skill. Page rules are in [pages and agent boundaries](../policies/pages.md); the project's `design-files.json` names the file, its pages and where local copies live.
 
 ## Scope and authority
-Promote only what the user has said is ready, and only after they approve the plan in step 3. Changes to Prototype are shared and usually apply immediately, so check before copying anything and verify after. Never edit Prototype boards in place outside a promotion, and never delete boards; superseded work stays restorable through the file's version history. Showroom is curated for presenting to stakeholders, so promotion does not change it.
+Promote only settled work: it passes the checks in step 2, and everyone whose work it includes agrees it is ready. Wait for approval of the plan in step 3. Changes to Prototype are shared and usually apply immediately, so check before copying anything and verify after. Never edit Prototype boards in place outside a promotion, and never delete boards; superseded work stays restorable through the file's version history. Showroom is curated for presenting to stakeholders, so promotion does not change it.
 
 ## 1. Identify what is being promoted
-Name the flow or screens, list their boards in Workshop, and find any Prototype boards they replace or connect to.
+Name the flow or screens, list their boards in the source page, and find any Prototype boards they replace or connect to.
 
 ## 2. Check before copying
-Check the Workshop boards, and report every failure with the board it concerns:
+Check the source boards, and report every failure with the board it concerns:
 
 - **States:** each screen has the states its flow needs, such as empty, loading, error and success, plus any the flow implies.
 - **No dead ends:** every button and link leads to a board that will exist in Prototype after the copy, and every board is reachable from the flow's start.
@@ -26,9 +26,9 @@ Stop until each failure is fixed or the user explicitly accepts it as a known ga
 Show the user one short list: the boards to copy, the Prototype boards they replace, links to update, Showroom screens the change affects, and the version name, such as "Promote: search results". Wait for approval.
 
 ## 4. Copy and connect
-1. Copy the boards from Workshop into Prototype through the tool skill. Workshop keeps its boards and carries on as the work-in-progress prototype. Copies keep their Workshop board names, so later promotions replace the right boards; a copy that replaces an existing Prototype board takes its place and position, so links keep working.
-2. Point the copies' links at Prototype boards instead of Workshop ones, reconnect links from other Prototype boards, and set the flow's starting board.
-3. Check again inside Prototype: every link resolves within Prototype, and nothing depends on Workshop or Scratchpad.
+1. Copy the boards into Prototype through the tool skill. The source keeps its boards and carries on. Copies keep their board names, so later promotions replace the right boards; a copy that replaces an existing Prototype board takes its place and position, so links keep working.
+2. Point the copies' links at Prototype boards instead of source ones, reconnect links from other Prototype boards, and set the flow's starting board.
+3. Check again inside Prototype: every link resolves within Prototype, and nothing depends on Staging, Workshop or Scratchpad.
 4. Lock the promoted boards when the tool supports it.
 
 ## 5. Record the promotion

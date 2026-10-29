@@ -12,11 +12,13 @@ The collection is published at [jcklpe/wireframe-workflows](https://github.com/j
 This repository is public. Skills and examples use synthetic content; consuming projects keep their own design files, identifiers and private context.
 
 ## To Do
-- In Agent Hands' `use-penpot`, explain how Penpot does each item in the README's design-tool list, under the same names. Answer the Penpot questions there: copying boards between pages, whether prototype links are limited to one page, and reading interactions for the state and dead-end checks.
-- Explore how teammates coordinate in a shared file, and whether that needs its own skill.
 - Apply the taxonomy to the Landlord Mapper Wireframes file: add Cover and Prototype pages, promote the current-state boards from Workshop into Prototype (copying them, so Workshop keeps them as the starting point for new work), order the pages, and add `design-files.json` to that repository, referencing its existing token export manifest. This changes a shared design file, so it needs the user's OK; track it in that project's repository.
 - Decide how a project declares which pages its repository exports come from, in `design-files.json` or its tool-specific export manifest.
-- Have `use-penpot` read `design-files.json` to find a project's file and page roles, and explain how Penpot stores file metadata for the link back to the repository.
+- Penpot follow-ups live in Agent Hands' `penpot-design-capabilities` spike: having `use-penpot` read `design-files.json`, and copying boards between pages through Penpot's backend API so that promotion and merging need no paste.
+- Add a copy-and-paste prompt to the README that has an agent run `setup-wireframe-workflows`, and give setup a path for designers without Git that links the skills where their agent finds them.
+- Adopt the collection in a team project repository, with an instruction there that points agents to `setup-wireframe-workflows`. This writes to a shared repository, so it needs the user's go-ahead.
+- Draft a formatting and style policy for frames, covering board numbering for a tree or graph of screens and canvas layout, once the user's notes from earlier Figma work arrive.
+- Discuss and then draft `report-bug` and `audit-consistency`, the user's ideas recorded in the conceptual doc.
 
 ## Ready for Human QA
 - Policies: pages and agent boundaries (with naming), working in Workshop, Showroom and example content.
@@ -30,6 +32,7 @@ This repository is public. Skills and examples use synthetic content; consuming 
 - `audit-wcag` draft: a read-only check against WCAG 2.2 AA by default, covering what a design can show (contrast from tokens, use of color, target size, reflow, headings, consistency, form labels and errors, repeated entry, signing in, focus, dragging and text alternatives), each result recorded as pass, fail, not applicable or not shown with its criterion, and a list of built-product checks for `check-implementation`. `promote-wireframes` and the README link to it.
 - `spec-wireframes` draft: one Markdown spec per Prototype screen for coding agents (fields, then purpose, layout and components, states, interactions, content and data, accessibility and open questions), an index, specs regenerated from Prototype rather than edited by hand, and unsettled details recorded as open questions. The README manifest gains an optional `specs` location; `promote-wireframes` and the README link to it.
 - `check-implementation` draft: a read-only comparison of a running build with Prototype and its specs, screen by screen and state by state in a test environment, the accessibility checks only a built product can show, differences sorted into build fixes, settled open questions and deliberate departures for the user to decide, and a report with evidence. `audit-wcag` and the README link to it.
+- Owned pages, Staging and `merge-wireframes` drafts: the pages policy adds optional page owners and a Staging page for files with several Workshops; `merge-wireframes` works piece by piece, sorting differences into no overlap, agreed, drift and disagreement, and holds disagreements back for the people involved to settle; promotion takes settled work from Staging when there is one; the README manifest maps owned roles to lists; build, explore, setup and the Workshop policy follow.
 - Repository scaffold and Project Workflows adoption: review README, AGENTS and the workflow configuration.
 
 ## Done
@@ -38,3 +41,4 @@ This repository is public. Skills and examples use synthetic content; consuming 
 - Adopted Project Workflows from published `main` (`e173888`) on the branch `project/wireframe-workflows`, configured `workflow.toml` (`ce2c9bc` in the child), and pinned it (`faa2976`).
 - Registered the collection in configs as a submodule tracking `main` (`b175374`), and added its routing row to configs' AGENTS (`de55f07`).
 - Published the collection: the user created `jcklpe/wireframe-workflows` and pushed `main` and the Project Workflows branch `project/wireframe-workflows`. A fresh recursive clone checks out both pinned commits, and the commit configs' published pin names is fetchable.
+- Mapped the design-tool capabilities in Agent Hands' `use-penpot` and tested them on the hosted server: boards cannot be moved between pages through the Plugin API, so a person pastes them; links stay within a page; locking and file metadata work. Test material was removed.

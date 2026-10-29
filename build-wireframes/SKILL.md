@@ -7,7 +7,7 @@ description: "Run the everyday wireframing loop: take a request, work it in Work
 The engine for everyday design work. The rules for each page live in the policies; this skill is the order in which they come into play. Read [pages and agent boundaries](../policies/pages.md), [working in Workshop](../policies/workshop.md) and [example content](../policies/example-content.md) first. The project's `design-files.json` names the file and its pages, and the tool skill handles the mechanics.
 
 ## The loop
-1. **Take the request.** Restate what is being asked in a sentence, and find where it lands in Workshop: which flow, which screens.
+1. **Take the request.** Restate what is being asked in a sentence, and find where it lands in Workshop, the requester's own when pages have owners: which flow, which screens.
 2. **Read the current state.** Look at the affected part of Workshop, how it connects, and what the Component Library and tokens offer. Change nothing yet.
 3. **Choose the path.**
    - The request is clear: build it in Workshop (step 4).
@@ -19,4 +19,4 @@ The engine for everyday design work. The rules for each page live in the policie
 5. **Check.** Export the changed boards as images and look at them. Read where each new link leads.
 6. **Report and continue.** Say what changed, where it connects, which questions and states are still open, and what was proposed for the Component Library. Then take the next request, or loop back to step 3 for anything left open.
 
-When a flow is finished and the user agrees, hand it to `promote-wireframes`.
+When a flow is finished and the user agrees, hand it to [merge-wireframes](../merge-wireframes/SKILL.md) when the file has Staging, and to [promote-wireframes](../promote-wireframes/SKILL.md) otherwise.

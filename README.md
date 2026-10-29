@@ -10,7 +10,7 @@ The collection has three kinds of material:
 - **References** define the formats and contracts the skills rely on.
 
 ## Policies
-- [Pages and agent boundaries](policies/pages.md): the six pages, how they work together, who may change what, and naming by role.
+- [Pages and agent boundaries](policies/pages.md): the pages, how they work together, owned pages, who may change what, and naming by role.
 - [Working in Workshop](policies/workshop.md): how changes to the work-in-progress prototype are made.
 - [Showroom](policies/showroom.md): how the curated walkthrough is kept.
 - [Example content](policies/example-content.md): realistic, labelled, made-up content.
@@ -22,7 +22,8 @@ The collection has three kinds of material:
 | [build-wireframes](build-wireframes/SKILL.md) | Everyday design work: the loop through Workshop, Scratchpad and the Component Library |
 | [explore-wireframe-options](explore-wireframe-options/SKILL.md) | Showing several options for a design question |
 | [map-user-flows](map-user-flows/SKILL.md) | Working out how someone reaches a goal before its screens are built |
-| [promote-wireframes](promote-wireframes/SKILL.md) | Copying finished work into Prototype |
+| [merge-wireframes](merge-wireframes/SKILL.md) | Combining several people's Workshop work in Staging |
+| [promote-wireframes](promote-wireframes/SKILL.md) | Copying settled work into Prototype |
 | [audit-wcag](audit-wcag/SKILL.md) | Checking wireframes against the WCAG criteria a design can show |
 | [spec-wireframes](spec-wireframes/SKILL.md) | Writing structured specs of Prototype screens for coding agents |
 | [check-implementation](check-implementation/SKILL.md) | Comparing a built product with Prototype and its specs |
@@ -77,7 +78,7 @@ Design files live in the cloud, while a project's documents and exports live in 
 
 - `files` lists every design file the project uses; most projects have one.
 - `name`, `tool`, `url` and `file_id` identify a file. `tool` names the design tool, such as `penpot` or `figma`, and so which tool skill operates it.
-- `pages` maps each standard role to the page's actual name in that file, so a project can keep its own names.
+- `pages` maps each standard role to the page's actual name in that file, so a project can keep its own names. A file with several designers adds `"staging"`, and maps each owned role to a list instead, for example `"workshop": [{ "page": "Workshop · Sam", "owner": "Sam" }, { "page": "Workshop · Ana", "owner": "Ana" }]`.
 - `local` is optional and says where the project keeps copies: a native archive, image exports, design tokens, specs for coding agents and any tool-specific export manifest.
 
 Paths are relative to the manifest's folder. The manifest holds no credentials; file and team identifiers are not secrets, and opening a file still requires access in the design tool. In the other direction, the Cover page links back to the repository, and a tool that can store file metadata also records the repository's address in the file itself.
