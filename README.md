@@ -1,7 +1,7 @@
 # Wireframe Workflows
 Reusable agent skills for wireframing with agents: how a design file's pages are organized, how ideas are explored and folded into work in progress, how finished work is promoted into a navigable prototype, and how it is presented. The procedures are tool-agnostic. Mechanics for a particular design tool, such as connecting to it, running its commands or exporting from it, belong to that tool's own skills, for example Agent Hands' `use-penpot` or the Figma MCP.
 
-**Status:** early. More skills are planned in the [foundations spike](docs/active-spikes/wireframe-workflow-foundations.md).
+**Status:** early. Every planned skill is drafted and awaiting review; the [foundations spike](docs/active-spikes/wireframe-workflow-foundations.md) tracks what is left.
 
 The collection has three kinds of material:
 
@@ -25,6 +25,7 @@ The collection has three kinds of material:
 | [promote-wireframes](promote-wireframes/SKILL.md) | Copying finished work into Prototype |
 | [audit-wcag](audit-wcag/SKILL.md) | Checking wireframes against the WCAG criteria a design can show |
 | [spec-wireframes](spec-wireframes/SKILL.md) | Writing structured specs of Prototype screens for coding agents |
+| [check-implementation](check-implementation/SKILL.md) | Comparing a built product with Prototype and its specs |
 | [update-wireframe-workflows](update-wireframe-workflows/SKILL.md) | Bringing a project's adoption up to date with the shared collection |
 
 ## References

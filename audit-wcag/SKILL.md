@@ -42,7 +42,7 @@ Give every check on every board one result:
 - **Not applicable:** the board has nothing the criterion covers.
 - **Not shown:** the wireframe does not say enough to judge, such as an unmarked focus order. Either mark it in the wireframe or leave it for the built product.
 
-Some criteria only the built product can show, such as keyboard operation, screen reader names and roles, zooming text to 200%, text spacing, and content that appears on hover or focus. List them once as checks for `check-implementation` rather than marking every board.
+Some criteria only the built product can show, such as keyboard operation, screen reader names and roles, zooming text to 200%, text spacing, and content that appears on hover or focus. List them once as checks for [check-implementation](../check-implementation/SKILL.md) rather than marking every board.
 
 ## 4. Report
 Report the standard and level, the boards checked, each failure with its board and a suggested fix, the "not shown" items, and the list left for the built product. During a promotion, `promote-wireframes` stops until each failure is fixed or the user accepts it, and accepted failures go into its change note. After fixes in Workshop, audit the changed boards again.
