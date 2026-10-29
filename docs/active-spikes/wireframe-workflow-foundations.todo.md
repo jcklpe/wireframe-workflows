@@ -20,6 +20,17 @@ This repository is public. Skills and examples use synthetic content; consuming 
 - Draft a formatting and style policy for frames, covering board numbering for a tree or graph of screens and canvas layout, once the user's notes from earlier Figma work arrive.
 - Discuss and then draft `report-bug` and `audit-consistency`, the user's ideas recorded in the conceptual doc.
 
+## Handoff notes (2026-10-29)
+Claude Code drafted this collection and is handing it to Codex. Context the files alone do not give:
+
+- **Nothing is tested in a real project yet.** Every skill and policy here is a reviewed draft. The user wants the first real use to go slowly, starting with an approval slate rather than direct changes to a shared design file.
+- **How the user has wanted work done.** One skill or change at a time: draft it, validate it (skill frontmatter with the skill-creator validator, relative links, and a scan for personal paths and private names), then show the user a short summary that names the choices they might push back on. Commit only on their go-ahead, by pathspec, with `Spike: wireframe-workflow-foundations` and no co-author trailers. After each commit here, the user's configs repository records the new pin in its own commit with `Patch: wireframe-workflows-collection`. The user approves pushes per batch; ask before pushing configs or any other repository.
+- **Writing.** Plain language, tool-agnostic, names by role and synthetic examples. Standing rules go in `policies/`, procedures in skills and formats in the README; skills link to policies rather than restating them. The user wants documents to record decisions only, without surrounding context, and corrections written as the current truth.
+- **Decisions on 2026-10-29.** Pages *can* have owners; a file one person works in has none, even when others look at it. `merge-wireframes` accounts for disagreements but does not mediate them. Settled means passing promotion's checks with the agreement of everyone whose work is included. Shared components are compared by identity, not appearance. This public repository stays generic: no teammates' names or private project details.
+- **Penpot.** Agent Hands' `use-penpot` maps the capability list and copies boards between pages through Penpot's backend API with the user's access token; links stay within a page. Its `penpot-design-capabilities` spike holds the details.
+- **Private context.** The user's handoff note, linked from their workspace's agent coordination index, holds local paths, the first consumer's file identifiers, the team project behind owned pages and Staging, and the request for the user's Figma frame conventions.
+- **Suggested order for the To Do list.** The frame formatting and numbering policy, since the user's earlier Figma work is the source; the README prompt and a setup path without Git, which teammates need before team adoption; an approval slate for the Landlord Mapper file; then `report-bug` and `audit-consistency`, discussed with the user first.
+
 ## Ready for Human QA
 - Policies: pages and agent boundaries (with naming), working in Workshop, Showroom and example content.
 - README: policies, skills and references (the design-tool capability list and the `design-files.json` manifest), and adoption.
