@@ -6,7 +6,7 @@ attention: live
 The [conceptual doc](wireframe-workflow-foundations.md) holds the adopted taxonomy, loops, provisional agent boundaries and open questions. This file tracks concrete work.
 
 ## Current state
-The collection repository exists locally on `main`, adopts Project Workflows on the local branch `project/wireframe-workflows`, and is registered in the user's configs as a submodule tracking `main`. Nothing is published. Every planned skill exists as a draft awaiting the user's review.
+The collection is published at [jcklpe/wireframe-workflows](https://github.com/jcklpe/wireframe-workflows) on `main`, adopts Project Workflows on its published branch `project/wireframe-workflows`, and is registered in the user's configs as a submodule tracking `main`. Every planned skill exists as a draft awaiting the user's review.
 
 ## Public safety
 This repository is public. Skills and examples use synthetic content; consuming projects keep their own design files, identifiers and private context.
@@ -17,7 +17,6 @@ This repository is public. Skills and examples use synthetic content; consuming 
 - Apply the taxonomy to the Landlord Mapper Wireframes file: add Cover and Prototype pages, promote the current-state boards from Workshop into Prototype (copying them, so Workshop keeps them as the starting point for new work), order the pages, and add `design-files.json` to that repository, referencing its existing token export manifest. This changes a shared design file, so it needs the user's OK; track it in that project's repository.
 - Decide how a project declares which pages its repository exports come from, in `design-files.json` or its tool-specific export manifest.
 - Have `use-penpot` read `design-files.json` to find a project's file and page roles, and explain how Penpot stores file metadata for the link back to the repository.
-- Publication, which is the user's action: create the GitHub repository `jcklpe/wireframe-workflows`, push `main`, and push the `project/wireframe-workflows` branch to the Project Workflows remote, then verify a fresh recursive clone. The configs repository is already published with this submodule registered, so its recursive clones fail on this submodule until the repository exists.
 
 ## Ready for Human QA
 - Policies: pages and agent boundaries (with naming), working in Workshop, Showroom and example content.
@@ -38,3 +37,4 @@ This repository is public. Skills and examples use synthetic content; consuming 
 - Created the repository on `main` with README, AGENTS, LICENSE (AGPL-3.0-only), an ignore baseline and TODO (`8168b1f`).
 - Adopted Project Workflows from published `main` (`e173888`) on the branch `project/wireframe-workflows`, configured `workflow.toml` (`ce2c9bc` in the child), and pinned it (`faa2976`).
 - Registered the collection in configs as a submodule tracking `main` (`b175374`), and added its routing row to configs' AGENTS (`de55f07`).
+- Published the collection: the user created `jcklpe/wireframe-workflows` and pushed `main` and the Project Workflows branch `project/wireframe-workflows`. A fresh recursive clone checks out both pinned commits, and the commit configs' published pin names is fetchable.
