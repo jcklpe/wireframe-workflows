@@ -28,7 +28,7 @@ Show the user one short list: the boards to copy, the Prototype boards they repl
 ## 4. Copy and connect
 1. Copy the boards into Prototype through the tool skill. The source keeps its boards and carries on. Copies keep their board names, so later promotions replace the right boards; a copy that replaces an existing Prototype board takes its place and position, so links keep working.
 2. Point the copies' links at Prototype boards instead of source ones, reconnect links from other Prototype boards, and set the flow's starting board.
-3. Check again inside Prototype: every link resolves within Prototype, and nothing depends on Staging, Workshop or Scratchpad.
+3. Check again inside Prototype: every link resolves within Prototype, and nothing depends on Staging, Workshop, Scratchpad or Archive.
 4. Lock the promoted boards when the tool supports it.
 
 ## 5. Record the promotion

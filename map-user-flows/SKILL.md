@@ -4,7 +4,7 @@ description: "Work out the route someone takes through a product to reach a goal
 ---
 
 # Map User Flows
-Work out how someone gets to a goal before building the screens for it. Page rules are in [pages and agent boundaries](../policies/pages.md); the project's `design-files.json` names the file and its pages, and the tool skill handles the mechanics.
+Work out how someone gets to a goal before building the screens for it. Page rules are in [pages and agent boundaries](../policies/pages.md), and exploration follows [Scratchpad and Archive](../policies/scratchpad-and-archive.md); the project's `design-files.json` names the file and its pages, and the tool skill handles the mechanics.
 
 ## Scope and authority
 Draw only in Scratchpad. Read Workshop, Prototype and the project's requirements and research, but change nothing else. Base the flow on what the user and the sources say; where they are silent, ask rather than invent a need or a step. Research can contain personal details: summarize what it shows, cite where it came from, and never copy personal details into the design file.
@@ -36,6 +36,6 @@ Draw the agreed outline in Scratchpad as one labelled group headed by the goal, 
 Export the map as an image and check that it reads clearly.
 
 ## 5. Hand off
-The new and changed steps are the work list for [build-wireframes](../build-wireframes/SKILL.md), which builds them in Workshop and links them as the map shows. Leave the map in Scratchpad as the reference for that work, and label its status, "Agreed" and later "Built", so later readers know whether it still describes the design.
+The new and changed steps are the work list for [build-wireframes](../build-wireframes/SKILL.md), which builds them in Workshop and links them as the map shows. Keep the map as the reference for that work, with the policy’s Chosen — awaiting integration status. Mark it Integrated only after the Workshop routes have been built and checked, linking to them. Record rationale, remaining work and verification in the partner repository. Older maps may move to the shared Archive within the requested scope, retaining their original owner and links; do not archive automatically on handoff.
 
 Report the goal, the sources, the steps and branches, what exists and what is new, any open questions, and where the map is.

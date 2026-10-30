@@ -5,5 +5,5 @@ Showroom tells the design's story to a particular audience. It is curated, not g
 - **Draw on the real material.** A walkthrough can draw on recorded and transcribed feedback, meeting and session notes, strategy discussions with collaborators or agents, research documents and the wireframes themselves. Note where each idea comes from.
 - **Cite, never invent.** Cite each source by name, linking to it where possible. Never invent a source, quote or finding, and keep what sources say separate from design proposals.
 - **Show screens as marked copies.** A screen shown in Showroom is a copy from Prototype, labelled with the Prototype screen it came from and linked to it, so people can click through for themselves.
-- **Label what is not current.** Workshop or Scratchpad material appears only when the story needs it, marked as a proposal or option.
+- **Label what is not current.** Workshop, Scratchpad or Archive material appears only when the story needs it, marked as a proposal, option or historical exploration as appropriate.
 - **Learn from use.** When a way of presenting works well, record it in the project, so the approach grows from real walkthroughs.

@@ -1,5 +1,5 @@
 # Pages and agent boundaries
-Every wireframe file uses these pages, in this order: the shared pages first, then the working pages. Staging is added only when a file has more than one Workshop.
+Wireframe files use the following page order. Staging is added only when a file has more than one Workshop; Archive is added when there is historical material to hold and always sits at the end.
 
 | Page | What it is for |
 | --- | --- |
@@ -8,13 +8,15 @@ Every wireframe file uses these pages, in this order: the shared pages first, th
 | Prototype | The settled design: finished work that anyone can click through without hitting dead ends or rough edges. It depends only on the Component Library. A stable starting point can live here. |
 | Staging | Where work from several people's Workshops is combined and checked before promotion. |
 | Workshop | The work-in-progress prototype: ideally one prototype that covers everything, finished and unfinished. See [working in Workshop](workshop.md). |
-| Scratchpad | Divergent options and in-between variations, such as three approaches to one idea side by side. |
+| Scratchpad | Active exploration: options, rough ideas, interaction studies and flow sketches. See [Scratchpad and Archive](scratchpad-and-archive.md). |
 | Component Library | The components the other pages use. |
+| Archive | Shared, browsable historical exploration, grouped with the original owner clear. |
 
 A project can use different page names when it already has them; its `design-files.json` maps them to these roles.
 
 ## How the pages work together
-- **Scratchpad and Workshop work as a pair.** Work happens in Workshop. When a design question comes up, options go into Scratchpad, labelled A, B, C. The chosen option is folded into Workshop, and the question, options and reasoning are recorded.
+- **Scratchpad and Workshop work as a pair.** Scratchpad supports flexible exploration groups with explicit status. Chosen approaches are integrated and checked across the connected Workshop routes. The [Scratchpad and Archive policy](scratchpad-and-archive.md) defines grouping, status and the boundary between canvas context and repository records.
+- **Archive preserves exploration history.** Less-current groups can move there within the requested scope, with ownership, context and links preserved. Archival is not automatic deletion or approval.
 - **Staging combines Workshops.** When several people each have a Workshop, their finished work is merged into Staging, where conflicts are settled and the combined design is checked. A file with one Workshop skips Staging.
 - **Promotion copies settled work into Prototype**, from Staging when the file has one and from Workshop otherwise. The source keeps its boards and keeps working. Work is settled when it passes promotion's checks and everyone whose work it includes agrees. Prototype changes only through promotion, a deliberate, checked step that also saves a named version and writes a change note.
 - **Showroom is curated.** Promotion flags Showroom screens that show changed work; updating them is a choice.
@@ -25,7 +27,8 @@ Pages can have owners. When several people design in one file, each can have the
 ## Who may change what
 These boundaries are provisional and expected to change with experience. Design tools generally cannot enforce them, so agents follow them as rules.
 
-- **Scratchpad:** agents create options freely when asked to explore.
+- **Scratchpad:** agents sketch and create options when asked to explore, following the Scratchpad policy.
+- **Archive:** shared and historical. Archive or resume work within the requested scope, preserve its original owner and respect that owner’s boundaries. Do not edit another person’s archived work without their OK.
 - **Workshop:** agents change it on request.
 - **Owned pages:** an agent works in its own person's Workshop and Scratchpad, reads everyone else's, and changes another person's page only with that person's OK.
 - **Staging:** only through merging.
