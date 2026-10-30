@@ -10,6 +10,9 @@ Define a tool-agnostic way to organize wireframe files and to work in them with 
 - **Vocabulary.** The design system is the existing, immanent system that organizes a product. Component libraries, token exports and similar files are artifacts that document parts of it, not the system itself.
 - **Tool-agnostic method, tool-specific mechanics.** This collection describes how to work; connecting to a design tool, calling its API or MCP server and exporting from it belong to tool skills such as Agent Hands' `use-penpot` or the Figma MCP. Each side references the other.
 
+## Board numbering and layout
+Navigation addresses and descriptive screen/state names identify boards uniquely in the current design; persistent screen or view IDs are not required. Flows progress left to right with alternate branches on separate rows. A short code can combine the navigation address and abbreviated name/state, such as `1.1.1.pdso`. The approved [policy](../../policies/board-numbering-and-layout.md) requires page-local uniqueness, meaningful qualifiers to resolve collisions, project-defined overlay notation and optional viewport qualifiers. References outside a page include its file/page context. Scratchpad organization follows its own policy.
+
 ## Page taxonomy
 Adopted by the user on 2026-10-27, with agent boundaries still provisional. The maintained version now lives in the [pages policy](../../policies/pages.md).
 
@@ -56,7 +59,7 @@ On merging, Figma's branching flags conflicts layer by layer, merges a branch al
 ## Policies, skills and references
 Adopted by the user on 2026-10-28. Rules that must hold whenever anyone works in a design file are policies, because a skill only loads when a request triggers it; an adopting project's instructions tell agents to read the policies before touching the file. Procedures with steps are skills. Formats and contracts are references in the README.
 
-The policies are [pages and agent boundaries](../../policies/pages.md) (the six pages, how they work together, who may change what, and naming by role), [working in Workshop](../../policies/workshop.md), [Showroom](../../policies/showroom.md) and [example content](../../policies/example-content.md). Showroom in particular is curated work whose form should emerge from real walkthroughs, so it is a policy rather than a procedure.
+The policies are [pages and agent boundaries](../../policies/pages.md) (page roles, how they work together, who may change what, and naming by role), [working in Workshop](../../policies/workshop.md), [Showroom](../../policies/showroom.md) and [example content](../../policies/example-content.md). Showroom in particular is curated work whose form should emerge from real walkthroughs, so it is a policy rather than a procedure.
 
 ## Skill map
 Adopted by the user on 2026-10-27 and revised on 2026-10-28. Skills are named verb-first and link to the policies rather than restating them. People use the wireframes to discuss the design. Implementation is moving to coding agents, so detailed build information goes to them as structured specs rather than annotated spec sheets for human developers.
@@ -65,7 +68,7 @@ Adopted by the user on 2026-10-27 and revised on 2026-10-28. Skills are named ve
 | --- | --- | --- |
 | `setup-wireframe-workflows` | Starting a design file, or tidying an existing one | Adopts the collection in a project and creates or retrofits the file's pages, Cover and page order. Mirrors `setup-project-workflows`. Every other skill assumes the structure it establishes. |
 | `build-wireframes` | "Add this route to the wireframes" | The engine for everyday work: take the request, read the current state, choose the path (build, ask, map the flow, explore options or propose a Component Library part), build in Workshop under the policies, check, report and loop. |
-| `explore-wireframe-options` | "Show me three ways to do X" | The Scratchpad loop: labelled options side by side, the chosen one folded into Workshop, the rest clearly retired. Records the question, the options and the user's reasoning for the choice. The only place the agent may make a mess freely. |
+| `explore-wireframe-options` | "Show me three ways to do X" | The comparison loop in Scratchpad: labelled alternatives, selected work integrated and checked in Workshop, and history retained in Scratchpad or the shared Archive. Decisions and rationale live in the partner repository, with concise context and links on the canvas. |
 | `promote-wireframes` | "This flow is done" | The only skill that changes Prototype: check that every needed state (empty, loading, error, success) exists and that there are no dead ends, copy the boards, save a named version, write a short "what changed" note, flag affected Showroom screens and trigger the repository exports and specs. |
 | `merge-wireframes` | "Combine our Workshops" | Merges several people's Workshop work into Staging piece by piece: brings in work that does not overlap or is already agreed, fixes drift with the owners, and holds back disagreements until the people involved settle them. Adopted 2026-10-29. |
 | `update-wireframe-workflows` | The collection improves and a project should catch up | Ancestry-aware updates for adopting projects. Mirrors `update-project-workflows`, and is part of the first set so adoption and updates work from the start. |
@@ -82,7 +85,6 @@ Component Library changes start inside `build-wireframes` as proposals, and expo
 
 - `report-bug`: a person clicking through the prototype finds a route that leads somewhere unexpected, or a panel or modal that does not open where expected. The skill would capture where they were, what they did and what they expected, then trace the links to the cause.
 - `audit-consistency`: routes built early drift from decisions made later. The skill would check screens against recorded decisions and shared patterns and list what has fallen behind.
-- A formatting and style policy for frames: how boards are numbered, given that a site is a tree or graph of screens, and how they are laid out on the canvas. The user's notes from earlier Figma work will inform it.
 - A copy-and-paste prompt in the README that sets up the collection through `setup-wireframe-workflows`, and a setup path for designers without Git that links the skills where their agent finds them.
 - Adoption in team project repositories, with an instruction in each that points agents to `setup-wireframe-workflows`.
 
@@ -90,8 +92,6 @@ Component Library changes start inside `build-wireframes` as proposals, and expo
 Adopted by the user on 2026-10-27. Design files live in the cloud while project documents and exports live in a repository, so a project-owned `design-files.json` at the root of the folder the design work belongs to connects them. It lists each design file's name, tool, URL and file ID, maps each standard page role to the file's actual page name, and says where local copies such as archives, image exports, tokens and tool-specific export manifests live. Agents and tool skills read it instead of searching for the right file. In the other direction, the Cover links back to the repository, and a tool that can store file metadata records the repository's address in the file. The README defines the format, and `setup-wireframe-workflows` writes and checks it. An existing tool-specific manifest, such as Landlord Mapper's token export manifest, stays as it is and is referenced from `local`.
 
 ## Agent proposals not yet decided
-- **Version history instead of an Archive page.** A named version at each promotion keeps superseded work restorable without a graveyard page.
-- **Page order.** Published pages first (Cover, Showroom, Prototype), then working pages (Workshop, Scratchpad, Component Library).
 - **Entry boards.** A small board at the top of each page saying what the page is for, mainly for newcomers and agents.
 
 ## Open questions
@@ -104,3 +104,8 @@ Adopted by the user on 2026-10-27. Design files live in the cloud while project 
 - **First consumer:** Texas-LandlordMapper-design. Its Wireframes file currently has Showroom, Workshop, Scratchpad and Component Library pages; Cover and Prototype are not yet added.
 - **Tool mechanics:** Agent Hands' `setup-penpot` (configuration and keys) and `use-penpot` (MCP connector, design-work mechanics and the manifest-driven token export).
 - **Workflow process:** this repository's own documentation follows Project Workflows, adopted at `project-workflows/`.
+
+## Scratchpad and browsable history
+The user supports flexible exploration groups, explicit status, concise canvas context and repository-owned decisions, rationale, tasks and verification. Organizing by design question is useful but not required. Exploration should retain a browsable history, with less-current material eligible for an Archive page rather than disappearing into version history alone.
+
+The approved [Scratchpad and Archive policy](../../policies/scratchpad-and-archive.md) defines flexible grouping, explicit status, archival mechanics and information boundaries. Archive is shared, at the end of the file, with the original owner clear in each group. The pages policy, manifest documentation and relevant skills follow this model. No existing design file has been reorganized.

@@ -17,7 +17,6 @@ This repository is public. Skills and examples use synthetic content; consuming 
 - Penpot follow-ups live in Agent Hands' `penpot-design-capabilities` spike: having `use-penpot` read `design-files.json`, and deciding how promotion replaces an existing Prototype board.
 - Add a copy-and-paste prompt to the README that has an agent run `setup-wireframe-workflows`, and give setup a path for designers without Git that links the skills where their agent finds them.
 - Adopt the collection in a team project repository, with an instruction there that points agents to `setup-wireframe-workflows`. This writes to a shared repository, so it needs the user's go-ahead.
-- Draft a formatting and style policy for frames, covering board numbering for a tree or graph of screens and canvas layout, once the user's notes from earlier Figma work arrive.
 - Discuss and then draft `report-bug` and `audit-consistency`, the user's ideas recorded in the conceptual doc.
 
 ## Handoff notes (2026-10-29)
@@ -32,11 +31,12 @@ Claude Code drafted this collection and is handing it to Codex. Context the file
 - **Suggested order for the To Do list.** The frame formatting and numbering policy, since the user's earlier Figma work is the source; the README prompt and a setup path without Git, which teammates need before team adoption; an approval slate for the Landlord Mapper file; then `report-bug` and `audit-consistency`, discussed with the user first.
 
 ## Ready for Human QA
+- Verify the reconciled Scratchpad/Archive workflow in a real design file: shared Archive last, original owners retained, exploration status distinguished from integration, and repository-owned decision records. Policy approved; policy and skill changes committed in `c93962e`, with manifest documentation reconciled. No design-file moves or deletions performed.
 - Policies: pages and agent boundaries (with naming), working in Workshop, Showroom and example content.
 - README: policies, skills and references (the design-tool capability list and the `design-files.json` manifest), and adoption.
 - `setup-wireframe-workflows` draft: adoption, linking the project to its design files through the manifest, routing agents to the policies, checking the design tool, setting up pages and the Cover, and verification.
 - `build-wireframes` draft: the everyday loop that applies the policies: take the request, read the current state, choose the path (build, ask, map the flow, explore options or propose a Component Library part), build in Workshop, check, report and loop.
-- `explore-wireframe-options` draft: framing the question, fair side-by-side options in Scratchpad, presenting trade-offs and waiting for the choice, folding it into Workshop, and recording and retiring the decision.
+- `explore-wireframe-options` draft: framing the question, fair side-by-side options in Scratchpad, presenting trade-offs and waiting for the choice, folding it into Workshop, and recording the decision in the repository while preserving browsable exploration history.
 - `promote-wireframes` draft: checks before copying (states, dead ends, library use, example content), an approved plan, copying into Prototype with retargeted links, a named version, a change note, flagging affected Showroom screens, and refreshing the project's copies.
 - `update-wireframe-workflows` draft: reading the pin and project branch, sorting shared improvements, project choices and conflicts, merging and pinning, carrying page, manifest, capability and routing changes through to the project with approval, sharing improvements back, and verification. Setup and the README link to it.
 - `map-user-flows` draft: naming the goal and its sources, reading the existing route, an outline of steps, actions, branches and ends agreed before drawing, a plain flow map in Scratchpad marking existing, changed and new steps, and the hand-off to `build-wireframes`. `build-wireframes` and the README link to it.
@@ -47,6 +47,7 @@ Claude Code drafted this collection and is handing it to Codex. Context the file
 - Repository scaffold and Project Workflows adoption: review README, AGENTS and the workflow configuration.
 
 ## Done
+- Approved and reconciled [Board numbering and canvas layout](../../policies/board-numbering-and-layout.md): page-local unique names and optional short codes, collision handling, project-defined overlays, optional viewport qualifiers and flow arrangement. README, page naming and spike records reconciled, including the approved Scratchpad/Archive documentation. Existing design files have not been renamed or rearranged.
 - Settled the first skill set with the user: `setup-wireframe-workflows`, `build-wireframes`, `explore-wireframe-options`, `promote-wireframes`, `present-wireframes` and `update-wireframe-workflows`.
 - Created the repository on `main` with README, AGENTS, LICENSE (AGPL-3.0-only), an ignore baseline and TODO (`8168b1f`).
 - Adopted Project Workflows from published `main` (`e173888`) on the branch `project/wireframe-workflows`, configured `workflow.toml` (`ce2c9bc` in the child), and pinned it (`faa2976`).

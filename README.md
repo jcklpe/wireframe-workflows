@@ -14,6 +14,8 @@ The collection has three kinds of material:
 - [Working in Workshop](policies/workshop.md): how changes to the work-in-progress prototype are made.
 - [Showroom](policies/showroom.md): how the curated walkthrough is kept.
 - [Example content](policies/example-content.md): realistic, labelled, made-up content.
+- [Board numbering and canvas layout](policies/board-numbering-and-layout.md): unique navigation addresses, descriptive names, short codes and flow arrangement.
+- [Scratchpad and Archive](policies/scratchpad-and-archive.md): flexible exploration groups, explicit status, integration and browsable history.
 
 ## Skills
 | Skill | Used when |
@@ -79,7 +81,10 @@ Design files live in the cloud, while a project's documents and exports live in 
 - `files` lists every design file the project uses; most projects have one.
 - `name`, `tool`, `url` and `file_id` identify a file. `tool` names the design tool, such as `penpot` or `figma`, and so which tool skill operates it.
 - `pages` maps each standard role to the page's actual name in that file, so a project can keep its own names. A file with several designers adds `"staging"`, and maps each owned role to a list instead, for example `"workshop": [{ "page": "Workshop · Sam", "owner": "Sam" }, { "page": "Workshop · Ana", "owner": "Ana" }]`.
+- `pages.archive` optionally maps the shared Archive page, placed last and created when there is historical material to hold. It is a single page name, not an owned-page list; original owners are identified within its groups.
 - `local` is optional and says where the project keeps copies: a native archive, image exports, design tokens, specs for coding agents and any tool-specific export manifest.
+
+`pages.archive` is the browsable history page in the design tool; `local.archive` is a native file export. They serve different purposes.
 
 Paths are relative to the manifest's folder. The manifest holds no credentials; file and team identifiers are not secrets, and opening a file still requires access in the design tool. In the other direction, the Cover page links back to the repository, and a tool that can store file metadata also records the repository's address in the file itself.
 

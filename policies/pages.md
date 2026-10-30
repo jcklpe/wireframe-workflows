@@ -38,4 +38,4 @@ These boundaries are provisional and expected to change with experience. Design 
 - **Cover:** when the file's structure or start links change.
 
 ## Naming
-Name pages, boards, layers and tokens by their role, not by how they currently look, so a visual change never forces a rename. Board names say the flow or area, the screen, the state and, when it matters, the viewport, for example "Search · Results · Empty · Mobile".
+Name pages, boards, layers and tokens by their role, not by how they currently look, so a visual change never forces a rename. Screen and state boards follow [Board numbering and canvas layout](board-numbering-and-layout.md): a navigation address, descriptive screen name and state, with context or viewport qualifiers when needed. Standalone overlay and partial notation is project-defined. Scratchpad groups can also hold loose studies without forcing them into a screen hierarchy.
