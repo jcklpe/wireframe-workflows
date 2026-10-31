@@ -15,7 +15,7 @@ This repository is public. Skills and examples use synthetic content; consuming 
 - Apply the taxonomy to the Landlord Mapper Wireframes file: add Cover and Prototype pages, promote the current-state boards from Workshop into Prototype (copying them, so Workshop keeps them as the starting point for new work), order the pages, and add `design-files.json` to that repository, referencing its existing token export manifest. This changes a shared design file, so it needs the user's OK; track it in that project's repository.
 - Decide how a project declares which pages its repository exports come from, in `design-files.json` or its tool-specific export manifest.
 - Penpot follow-ups live in Agent Hands' `penpot-design-capabilities` spike: having `use-penpot` read `design-files.json`, and deciding how promotion replaces an existing Prototype board.
-- Add a copy-and-paste prompt to the README that has an agent run `setup-wireframe-workflows`, and give setup a path for designers without Git that links the skills where their agent finds them.
+- Verify the new README setup prompt and optional global discovery with a teammate: preview-first installer supports Codex/Claude, refuses conflicts, and retains project-local authority. Four offline installer tests pass; fresh-client discovery and published teammate adoption remain to verify.
 - Adopt the collection in a team project repository, with an instruction there that points agents to `setup-wireframe-workflows`. This writes to a shared repository, so it needs the user's go-ahead.
 - Discuss and then draft `report-bug` and `audit-consistency`, the user's ideas recorded in the conceptual doc.
 

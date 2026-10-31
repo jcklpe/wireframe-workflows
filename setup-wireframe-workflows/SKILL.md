@@ -31,6 +31,9 @@ Add a short "Wireframes" section to the project's instructions, usually `AGENTS.
 
 Ask before committing file identifiers to a public repository if the user has not already published them.
 
+## Optional global discovery
+Offer the [global discovery procedure](references/global-skill-links.md) when requested or useful for work outside the current project. Ask for clients and skill selection, inspect existing destinations, preview with `scripts/link-skills.py`, then execute only the authorized selection. Keep project-local routing authoritative; do not automatically link nested Project Workflows or replace other installations.
+
 ## 3. Check the design tool
 Read the tool skill and confirm it explains how to do each item in [what the skills need from a design tool](../README.md#what-the-skills-need-from-a-design-tool). Then confirm the agent can reach the file named in the manifest with one read-only call, for example by reading the file's name and its list of pages, and check that the name matches the manifest. Report any capability the tool lacks; the affected steps fall back to the user doing them by hand.
 

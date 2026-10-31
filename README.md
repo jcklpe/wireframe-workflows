@@ -9,6 +9,15 @@ The collection has three kinds of material:
 - **Skills** are procedures an agent follows when a request calls for them.
 - **References** define the formats and contracts the skills rely on.
 
+## Start with your agent
+Copy this prompt into your coding agent. If you are already in an adopting project, use that project's README prompt instead so its instructions and pinned versions take precedence.
+
+```text
+Help me set up Wireframe Workflows from https://github.com/jcklpe/wireframe-workflows. Inspect my current project and existing installation before changing anything. Read the collection's setup-wireframe-workflows/SKILL.md and policies, then use that setup procedure. Keep the complete checkout and its dependencies together. Ask which design tool, file and page owner I am working with; do not modify teammates' pages. Offer optional global discovery for my chosen local agent clients using the collection's preview-first link installer, preserving existing skills. Explain any missing connector or file access. Do not push or publish anything as part of setup.
+```
+
+Cloning alone does not install skills globally. See [optional global discovery](setup-wireframe-workflows/references/global-skill-links.md) for selection, previews, conflicts and verification. A project's pinned collection remains authoritative over globally discovered skills.
+
 ## Policies
 - [Pages and agent boundaries](policies/pages.md): the pages, how they work together, owned pages, who may change what, and naming by role.
 - [Working in Workshop](policies/workshop.md): how changes to the work-in-progress prototype are made.
