@@ -22,7 +22,7 @@ A project can use different page names when it already has them; its `design-fil
 - **Showroom is curated.** Promotion flags Showroom screens that show changed work; updating them is a choice.
 
 ## Owned pages
-Pages can have owners. When several people design in one file, each can have their own Workshop and Scratchpad, named for them, for example "Workshop · Sam", and the project's `design-files.json` records who owns which. Owned pages sit together by role, and the other pages stay shared. A file that one person works in needs no owners, even when others look at it.
+Pages can have owners. When several people design in one file, each can have their own Workshop and Scratchpad, named for them, for example "Workshop · Sam", and the project's `design-files.json` records who owns which. Keep each owner’s Workshop immediately followed by that owner’s Scratchpad, repeating the pair for each person rather than grouping all Workshops ahead of all Scratchpads. Preserve the established order of people unless a different order is requested. The other pages stay shared. A file that one person works in needs no owners, even when others look at it.
 
 ## Who may change what
 These boundaries are provisional and expected to change with experience. Design tools generally cannot enforce them, so agents follow them as rules.

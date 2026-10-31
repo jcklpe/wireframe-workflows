@@ -48,6 +48,7 @@ Claude Code drafted this collection and is handing it to Codex. Context the file
 - Repository scaffold and Project Workflows adoption: review README, AGENTS and the workflow configuration.
 
 ## Done
+- Reconciled page ordering and setup guidance: each owner’s Workshop is followed immediately by their Scratchpad; preserve the established order of people, with shared Archive last.
 - Approved and reconciled [Board numbering and canvas layout](../../policies/board-numbering-and-layout.md): page-local unique names and optional short codes, collision handling, project-defined overlays, optional viewport qualifiers and flow arrangement. README, page naming and spike records reconciled, including the approved Scratchpad/Archive documentation. Existing design files have not been renamed or rearranged.
 - Settled the first skill set with the user: `setup-wireframe-workflows`, `build-wireframes`, `explore-wireframe-options`, `promote-wireframes`, `present-wireframes` and `update-wireframe-workflows`.
 - Created the repository on `main` with README, AGENTS, LICENSE (AGPL-3.0-only), an ignore baseline and TODO (`8168b1f`).
