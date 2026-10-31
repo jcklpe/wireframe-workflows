@@ -31,6 +31,7 @@ Claude Code drafted this collection and is handing it to Codex. Context the file
 - **Suggested order for the To Do list.** The frame formatting and numbering policy, since the user's earlier Figma work is the source; the README prompt and a setup path without Git, which teammates need before team adoption; an approval slate for the Landlord Mapper file; then `report-bug` and `audit-consistency`, discussed with the user first.
 
 ## Ready for Human QA
+- Connector onboarding: setup now routes missing Figma/Penpot connections through provider setup, preserving existing installations and distinguishing discovery from file access. Validate with a teammate who has no connector; this documentation change does not establish a live first-install result.
 - Verify the reconciled Scratchpad/Archive workflow in a real design file: shared Archive last, original owners retained, exploration status distinguished from integration, and repository-owned decision records. Policy approved; policy and skill changes committed in `c93962e`, with manifest documentation reconciled. No design-file moves or deletions performed.
 - Policies: pages and agent boundaries (with naming), working in Workshop, Showroom and example content.
 - README: policies, skills and references (the design-tool capability list and the `design-files.json` manifest), and adoption.

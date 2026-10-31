@@ -1,6 +1,6 @@
 ---
 name: setup-wireframe-workflows
-description: "Adopt Wireframe Workflows in a project, link the project to its cloud design files, and set up a file's standard pages, Cover and page order. Use when starting a wireframe file, reorganizing an existing file into the standard pages, connecting a repository to a design file, or adopting this collection in a project."
+description: "Adopt Wireframe Workflows in a project, link the project to its cloud design files, and set up a file's standard pages, Cover and page order. Use when starting a wireframe file, reorganizing an existing file into the standard pages, connecting a repository to a design file, setting up a missing Figma/Penpot connector, or adopting this collection in a project."
 ---
 
 # Setup Wireframe Workflows
@@ -34,8 +34,19 @@ Ask before committing file identifiers to a public repository if the user has no
 ## Optional global discovery
 Offer the [global discovery procedure](references/global-skill-links.md) when requested or useful for work outside the current project. Ask for clients and skill selection, inspect existing destinations, preview with `scripts/link-skills.py`, then execute only the authorized selection. Keep project-local routing authoritative; do not automatically link nested Project Workflows or replace other installations.
 
-## 3. Check the design tool
-Read the tool skill and confirm it explains how to do each item in [what the skills need from a design tool](../README.md#what-the-skills-need-from-a-design-tool). Then confirm the agent can reach the file named in the manifest with one read-only call, for example by reading the file's name and its list of pages, and check that the name matches the manifest. Report any capability the tool lacks; the affected steps fall back to the user doing them by hand.
+## 3. Connect and check the design tool
+Inspect the chosen agent client's existing plugins, MCP servers and tool skills before installing anything. Ask which client and design tool the person uses only when that is not already known. Reuse a working connection. If one is missing, guide setup rather than stopping at “connector unavailable.” Set up only the selected provider, preserve existing configuration, and have the user complete sign-in or secret entry through the provider's supported flow. Never ask for credentials in chat or store them in the project.
+
+### Figma
+Prefer the client's official Figma plugin when available; it supplies connector settings and tool skills together. Use the client's plugin discovery/install flow, or guide the user through installation and account authorization. If a plugin is unavailable, follow [Figma's current client-specific MCP setup instructions](https://developers.figma.com/docs/figma-mcp-server/remote-server-installation/) for the supported remote or desktop connection and install the accompanying tool skills where required. Check the current instructions rather than assuming all clients use the same commands or support the same capabilities. Explain any client restart or session refresh needed, then retry discovery. An MCP entry alone does not prove canvas editing is available.
+
+### Penpot
+Use an installed `setup-penpot` skill when available. Otherwise offer the selected Penpot capability from [Agent Hands](https://github.com/jcklpe/agent-hands), reading its `setup-agent-hands/SKILL.md` and `setup-penpot/SKILL.md` before installation; do not assume the teammate has this checkout or install the entire capability catalog. That procedure owns runtime checks, protected local configuration, MCP client registration and verification. The [official Penpot MCP guide](https://help.penpot.app/mcp/) is the alternative for a directly supported client or when Agent Hands is unavailable. Guide the user through enabling MCP, configuring their chosen client and connecting the intended open file. A server URL containing a key is a credential; keep it out of tracked files and tool output. Preserve existing keys rather than rotating them as a routine setup step.
+
+### Verify access and capabilities
+Read the selected tool skill and check it against [what the skills need from a design tool](../README.md#what-the-skills-need-from-a-design-tool). Confirm tool discovery after any required refresh, then make one read-only call against the manifest's file, such as reading its name and pages, and compare the identity. Distinguish installation, authentication, file access and supported operations; tool listing alone does not prove file access. Diagnose missing account authorization, file permissions and unsupported operations separately. For missing file permission, tell the person what access to request from the owner without changing sharing yourself.
+
+Continue repository onboarding while a user sign-in, client restart or access grant is pending. Leave a precise next step and a read-only verification to resume; do not replace the intended file or claim the connector is working. Unsupported operations may be completed manually. Connector setup does not authorize design changes; page changes still follow step 4.
 
 ## 4. Set up the pages
 1. Read the file's current pages and what is on each, without changing anything.
