@@ -9,7 +9,8 @@ The collection has three kinds of material:
 - **Skills** are procedures an agent follows when a request calls for them.
 - **References** define the formats and contracts the skills rely on.
 
-## Start with your agent
+<h2><img src="assets/agent-hands-head-thumbs-up.png" height="32" alt="Robot head giving a thumbs-up"> Start with your agent</h2>
+
 Copy this prompt into your coding agent. If you are already in an adopting project, use that project's README prompt instead so its instructions and pinned versions take precedence.
 
 ```text
