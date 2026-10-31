@@ -101,7 +101,7 @@ Paths are relative to the manifest's folder. The manifest holds no credentials; 
 A project adopts this collection as a pinned, root-level `wireframe-workflows/` Git submodule on a project-specific branch, the same way it adopts [Project Workflows](https://github.com/jcklpe/project-workflows). [setup-wireframe-workflows](setup-wireframe-workflows/SKILL.md) walks through adoption, adds the routing that tells agents to read the policies, and sets up the design file.
 
 ## Developing this collection
-This repository is the project root for its own development. It adopts Project Workflows at `project-workflows/` for its documentation and work process; [AGENTS.md](AGENTS.md) explains how. Clone with submodules:
+This repository is the project root for its own development. It adopts Project Workflows at `project-workflows/` for its documentation and work process; [AGENTS.md](AGENTS.md) explains how. The adopted [contribution procedure](project-workflows/coordinate-project-contribution/SKILL.md) and [collaborator quick start](project-workflows/README.md#join-an-existing-project) support human-directed review and separate agent-owned spikes. Multiple spikes/issues may share a branch; coordination remains local unless explicitly selected otherwise. Clone with submodules:
 
 ```sh
 git clone --recurse-submodules https://github.com/jcklpe/wireframe-workflows.git
