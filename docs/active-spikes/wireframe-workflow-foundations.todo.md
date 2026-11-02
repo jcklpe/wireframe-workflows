@@ -17,7 +17,7 @@ This repository is public. Skills and examples use synthetic content; consuming 
 - Penpot follow-ups live in Agent Hands' `penpot-design-capabilities` spike: having `use-penpot` read `design-files.json`, and deciding how promotion replaces an existing Prototype board.
 - Verify the new README setup prompt and optional global discovery with a teammate: preview-first installer supports Codex/Claude, refuses conflicts, and retains project-local authority. Four offline installer tests pass; fresh-client discovery and published teammate adoption remain to verify.
 - Adopt the collection in a team project repository, with an instruction there that points agents to `setup-wireframe-workflows`. This writes to a shared repository, so it needs the user's go-ahead.
-- Carry the approved D1–D6 policies and skills into consuming projects within their authorized scope. The shared checkpoint is ready for publication; client registration and design-file application need their own verification records. Broader DesignOps governance is excluded.
+- Exercise the approved consistency-audit and bug-fix skills against actual reports in consuming projects. Keep their application and client-registration evidence in the relevant project records; broader DesignOps governance remains excluded.
 
 ## Handoff notes (2026-10-29)
 Claude Code drafted this collection and is handing it to Codex. Context the files alone do not give:
@@ -49,6 +49,7 @@ Claude Code drafted this collection and is handing it to Codex. Context the file
 - Repository scaffold and Project Workflows adoption: review README, AGENTS and the workflow configuration.
 
 ## Done
+- Published the approved D1–D6 connected-Workshop policies and audit/bug-fix skills in `7692945`. Four installer checks pass with the twelve-skill catalog; frontmatter and relative links were validated. Wording approval and these package checks do not establish full prototype playback or adoption by other contributors.
 - Reconciled page ordering and setup guidance: each owner’s Workshop is followed immediately by their Scratchpad; preserve the established order of people, with shared Archive last.
 - Approved and reconciled [Board numbering and canvas layout](../../policies/board-numbering-and-layout.md): page-local unique names and optional short codes, collision handling, project-defined overlays, optional viewport qualifiers and flow arrangement. README, page naming and spike records reconciled, including the approved Scratchpad/Archive documentation. Existing design files have not been renamed or rearranged.
 - Settled the first skill set with the user: `setup-wireframe-workflows`, `build-wireframes`, `explore-wireframe-options`, `promote-wireframes`, `present-wireframes` and `update-wireframe-workflows`.
