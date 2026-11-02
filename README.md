@@ -22,6 +22,8 @@ Help me set up Wireframe Workflows from https://github.com/jcklpe/wireframe-work
 Cloning alone does not install skills globally. See [optional global discovery](setup-wireframe-workflows/references/global-skill-links.md) for selection, previews, conflicts and verification. A project's pinned collection remains authoritative over globally discovered skills.
 
 ## Policies
+Shared design agreements in `policies/` retain the conventions and ownership boundaries for design work by people and agents. Agent-only obligations are indexed separately in [the project-owned agent policy index](docs/agent-policies/policy.index.md); each operational policy requires agents to apply the complete corresponding agreement within its scope. Root skills describe task procedures. Adopting projects review and adopt their own policy copies explicitly; receiving this package or passing a structural check does not adopt policies or authorize design-file changes.
+
 - [Pages and agent boundaries](policies/pages.md): the pages, how they work together, owned pages, who may change what, and naming by role.
 - [Working in Workshop](policies/workshop.md): how changes to the work-in-progress prototype are made.
 - [Verification](policies/verification.md): structural, visual, playback and acceptance evidence, with explicit coverage and limits.
