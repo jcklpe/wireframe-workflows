@@ -40,7 +40,7 @@ Handle each change from step 2 that reaches beyond the collection:
 - **Manifest:** if the manifest format has a new `schema_version`, update `design-files.json` to it, keeping every existing entry and value.
 - **Design tool:** if the capability list has grown, check that the tool skill explains each new item, as in setup's step 3, and report any gap.
 - **Pages:** if page roles were added, renamed or redefined, read the design file and propose the changes as one short list, as in setup's step 4. Wait for approval, make the approved changes through the tool skill and record them in the manifest's `pages`. Never delete pages or boards, or move boards between pages, unless the user asks for that specifically.
-- **Policies:** changed policies apply to new work. Summarize what now works differently; rework existing boards only when the user asks.
+- **Policies and design agreements:** delivery supplies candidate agent policies, not consumer adoption. Compare project-owned operative copies with their actual prior source and the incoming candidates; use the selected policy-management skills and an actual human adoption decision before changing operative obligations. Review shared design agreement changes separately and retain project ownership and authorization boundaries. Rework existing boards only when the user asks.
 
 ## 5. Share improvements back
 When a change on the project branch would help every project, offer to contribute it. Rebuild it as a new commit on a clean branch from shared `main`, with nothing project-specific in it: no project names, file identifiers, page names or private notes. Never merge the project branch into `main`. Publishing that branch and merging it into `main` are the user's actions.
