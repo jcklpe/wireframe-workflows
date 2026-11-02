@@ -1,13 +1,15 @@
 # Wireframe Workflows
 Reusable agent skills for wireframing with agents: how a design file's pages are organized, how ideas are explored and folded into work in progress, how finished work is promoted into a navigable prototype, and how it is presented. The procedures are tool-agnostic. Mechanics for a particular design tool, such as connecting to it, running its commands or exporting from it, belong to that tool's own skills, for example Agent Hands' `use-penpot` or the Figma MCP.
 
-**Status:** early. Every planned skill is drafted and awaiting review; the [foundations spike](docs/active-spikes/wireframe-workflow-foundations.md) tracks what is left.
+**Status:** early and in active use. The [foundations spike](docs/active-spikes/wireframe-workflow-foundations.md) distinguishes adopted guidance, drafts awaiting review and remaining validation.
 
 The collection has three kinds of material:
 
 - **Policies** are rules that hold whenever anyone, person or agent, works in a wireframe file. An adopting project's instructions tell agents to read them before touching the design file.
 - **Skills** are procedures an agent follows when a request calls for them.
 - **References** define the formats and contracts the skills rely on.
+
+Wireframe Workflows owns operating wireframes and their component dependencies, including migration and verification under the project's existing authority. DesignOps concerns how people establish and negotiate shared standards; Project Workflows tracks work and contributions; tool capabilities perform service operations. None of those integrations is a prerequisite for routine wireframing, and installing this collection does not establish agreement or adopt another repository's governance process.
 
 <h2><img src="assets/agent-hands-head-thumbs-up.png" height="32" alt="Robot head giving a thumbs-up"> Start with your agent</h2>
 
@@ -22,6 +24,7 @@ Cloning alone does not install skills globally. See [optional global discovery](
 ## Policies
 - [Pages and agent boundaries](policies/pages.md): the pages, how they work together, owned pages, who may change what, and naming by role.
 - [Working in Workshop](policies/workshop.md): how changes to the work-in-progress prototype are made.
+- [Verification](policies/verification.md): structural, visual, playback and acceptance evidence, with explicit coverage and limits.
 - [Showroom](policies/showroom.md): how the curated walkthrough is kept.
 - [Example content](policies/example-content.md): realistic, labelled, made-up content.
 - [Board numbering and canvas layout](policies/board-numbering-and-layout.md): unique navigation addresses, descriptive names, short codes and flow arrangement.
@@ -32,6 +35,8 @@ Cloning alone does not install skills globally. See [optional global discovery](
 | --- | --- |
 | [setup-wireframe-workflows](setup-wireframe-workflows/SKILL.md) | Adopting the collection, linking a project to its design files, or setting up a file's pages |
 | [build-wireframes](build-wireframes/SKILL.md) | Everyday design work: the loop through Workshop, Scratchpad and the Component Library |
+| [fix-wireframe-bug-reports](fix-wireframe-bug-reports/SKILL.md) | Investigating and correcting problems reported naturally in chat, screenshots or walkthroughs |
+| [audit-wireframe-consistency](audit-wireframe-consistency/SKILL.md) | Looking for drift across connected routes, shared patterns and recorded decisions |
 | [explore-wireframe-options](explore-wireframe-options/SKILL.md) | Showing several options for a design question |
 | [map-user-flows](map-user-flows/SKILL.md) | Working out how someone reaches a goal before its screens are built |
 | [merge-wireframes](merge-wireframes/SKILL.md) | Combining several people's Workshop work in Staging |
@@ -93,6 +98,9 @@ Design files live in the cloud, while a project's documents and exports live in 
 - `pages` maps each standard role to the page's actual name in that file, so a project can keep its own names. A file with several designers adds `"staging"`, and maps each owned role to a list instead, for example `"workshop": [{ "page": "Workshop · Sam", "owner": "Sam" }, { "page": "Workshop · Ana", "owner": "Ana" }]`.
 - `pages.archive` optionally maps the shared Archive page, placed last and created when there is historical material to hold. It is a single page name, not an owned-page list; original owners are identified within its groups.
 - `local` is optional and says where the project keeps copies: a native archive, image exports, design tokens, specs for coding agents and any tool-specific export manifest.
+- `local.routes` may point to an existing project-owned route or board record. Keep Workshop launcher/entry metadata there rather than duplicating the registry in this manifest. If no such record exists, add a small route record and reference it here; its format remains project-defined.
+
+The route record identifies each Workshop launcher and its entries: descriptive name, design page/board reference, direct prototype link, relevant user-flow scenario and starting conditions, plus material limitations. Omit inapplicable fields. A scenario reference can point to another design file or repository; it is not another screen address. Several entries may share a screen. The [Workshop policy](policies/workshop.md#launcher-and-entry-points) defines how the launcher and repository record stay aligned.
 
 `pages.archive` is the browsable history page in the design tool; `local.archive` is a native file export. They serve different purposes.
 

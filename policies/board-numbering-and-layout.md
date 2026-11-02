@@ -61,7 +61,7 @@ Arrange each flow from left to right. Put alternate branches on separate rows, k
 
 Navigation depth and horizontal progression often coincide, but they need not. Keep addresses meaningful when a flow crosses a branch or returns to a screen; do not renumber boards simply to make their numbers increase across the row. A hierarchy overview and a journey walkthrough may arrange the same screens differently.
 
-Group a flow in a clearly named section or the tool’s equivalent. Leave consistent space for board names, transition labels and connections. Keep related steps close enough to follow, avoid overlapping boards or labels, and route connections so their source and destination are clear. Exact gaps depend on board size and annotation needs; this policy does not prescribe a universal pixel grid.
+Workshop uses a connected canvas and [launcher entry points](workshop.md#launcher-and-entry-points), with containers only when they earn their place. Leave consistent space for board names, transition labels and connections. Keep related steps close enough to follow, avoid overlapping boards or labels, and route connections so their source and destination are clear. Exact gaps depend on board size and annotation needs; this policy does not prescribe a universal pixel grid.
 
 Keep overlays and partials near the contexts they explain, or in a clearly referenced shared group when several flows use them. Do not imply that an overlay is a full navigation step merely by placing it next in a row. Use explicit labels for opening, closing, returning and changing state.
 
@@ -70,7 +70,9 @@ When comparing viewports, group and label corresponding views without making a v
 ## Titles and supporting information
 Use the board or section’s native title where the tool provides one. Do not repeat the same title in a decorative heading, banner or graphic beneath it. An actual heading inside the depicted product interface is different and stays in the wireframe. Exports that omit native titles may include a caption where the title is needed to interpret them.
 
-Keep canvas annotations focused on what a reviewer needs to understand the visible flow: purpose, meaningful state, branch conditions, unresolved choices and relevant source links. Detailed work history and metadata belong in the partner repository.
+Annotate what the interface and connections cannot explain: a prerequisite, branch condition, simulation, unresolved choice or meaningful difference between states. Put each note at the smallest useful scope: a scenario-wide limitation at its entry, a transition condition at its connection, and a state-specific caveat beside that board. Do not repeat the same explanation on every screen.
+
+Keep notes short enough to scan while following the route. At the intended review scale, reviewers should be able to read them without constantly zooming, and notes must not cover screens, labels or connections. If the canvas needs lengthy explanations to be understandable, first check whether the layout or interaction is unclear. Put detailed rationale, work history and verification in the partner repository, with a brief canvas summary and link where useful. These are review heuristics, not word-count limits.
 
 The repository keeps the current mapping between full names, short codes and design-tool board references, alongside flow relationships, decisions, open questions and export records. Build on the project’s existing manifest and specification formats rather than creating a competing registry. Keep authored decisions distinct from generated observations. Private research may remain in an external source; link it only where its access and privacy boundaries allow.
 

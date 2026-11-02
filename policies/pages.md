@@ -3,7 +3,7 @@ Wireframe files use the following page order. Staging is added only when a file 
 
 | Page | What it is for |
 | --- | --- |
-| Cover | A short, plain-language guide to the file: what it is, one line per page, start links into Prototype and Showroom, and a link back to the project repository. It can double as the file's thumbnail. |
+| Cover | A short, plain-language guide to the file: what it is, one line per page, links to Workshop launchers and available Prototype/Showroom entries, and a link back to the project repository. It can double as the file's thumbnail. |
 | Showroom | A curated walkthrough of the design for a particular audience, with narrative, annotations and citations. See the [Showroom policy](showroom.md). |
 | Prototype | The settled design: finished work that anyone can click through without hitting dead ends or rough edges. It depends only on the Component Library. A stable starting point can live here. |
 | Staging | Where work from several people's Workshops is combined and checked before promotion. |
@@ -13,6 +13,8 @@ Wireframe files use the following page order. Staging is added only when a file 
 | Archive | Shared, browsable historical exploration, grouped with the original owner clear. |
 
 A project can use different page names when it already has them; its `design-files.json` maps them to these roles.
+
+Across these pages, use the [verification policy](verification.md) to distinguish structural inspection, visual inspection, prototype playback and human acceptance. Page placement or a “Checked” label does not substitute for scoped evidence or the agreement required below.
 
 ## How the pages work together
 - **Scratchpad and Workshop work as a pair.** Scratchpad supports flexible exploration groups with explicit status. Chosen approaches are integrated and checked across the connected Workshop routes. The [Scratchpad and Archive policy](scratchpad-and-archive.md) defines grouping, status and the boundary between canvas context and repository records.

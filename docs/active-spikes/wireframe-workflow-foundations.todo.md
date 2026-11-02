@@ -17,7 +17,7 @@ This repository is public. Skills and examples use synthetic content; consuming 
 - Penpot follow-ups live in Agent Hands' `penpot-design-capabilities` spike: having `use-penpot` read `design-files.json`, and deciding how promotion replaces an existing Prototype board.
 - Verify the new README setup prompt and optional global discovery with a teammate: preview-first installer supports Codex/Claude, refuses conflicts, and retains project-local authority. Four offline installer tests pass; fresh-client discovery and published teammate adoption remain to verify.
 - Adopt the collection in a team project repository, with an instruction there that points agents to `setup-wireframe-workflows`. This writes to a shared repository, so it needs the user's go-ahead.
-- Discuss and then draft `report-bug` and `audit-consistency`, the user's ideas recorded in the conceptual doc.
+- Carry the approved D1–D6 policies and skills into consuming projects within their authorized scope. The shared checkpoint is ready for publication; client registration and design-file application need their own verification records. Broader DesignOps governance is excluded.
 
 ## Handoff notes (2026-10-29)
 Claude Code drafted this collection and is handing it to Codex. Context the files alone do not give:
@@ -31,6 +31,7 @@ Claude Code drafted this collection and is handing it to Codex. Context the file
 - **Suggested order for the To Do list.** The frame formatting and numbering policy, since the user's earlier Figma work is the source; the README prompt and a setup path without Git, which teammates need before team adoption; an approval slate for the Landlord Mapper file; then `report-bug` and `audit-consistency`, discussed with the user first.
 
 ## Ready for Human QA
+- D1–D6 wording approved on 2026-11-01: launcher/entry records, optional justified containers, operational annotation heuristics, explicit verification evidence, the two repair/audit skills and the DesignOps scope boundary. Frontmatter validation passed for both new skills and the two edited skills; changed-document relative links resolve. Both skills are discoverable in Codex/Claude installer previews, and all four installer tests pass with the twelve-skill catalog. Try the procedures against actual reports in the consuming project; no Figma changes have been made in this checkpoint.
 - Connector onboarding: setup now routes missing Figma/Penpot connections through provider setup, preserving existing installations and distinguishing discovery from file access. Validate with a teammate who has no connector; this documentation change does not establish a live first-install result.
 - Verify the reconciled Scratchpad/Archive workflow in a real design file: shared Archive last, original owners retained, exploration status distinguished from integration, and repository-owned decision records. Policy approved; policy and skill changes committed in `c93962e`, with manifest documentation reconciled. No design-file moves or deletions performed.
 - Policies: pages and agent boundaries (with naming), working in Workshop, Showroom and example content.

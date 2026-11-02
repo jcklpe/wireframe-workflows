@@ -24,7 +24,7 @@ class DiscoveryTests(unittest.TestCase):
         self.assertFalse(self.dest.exists())
         result = self.run_link('--execute')
         self.assertEqual(result.returncode, 0, result.stderr)
-        self.assertEqual(len(json.loads(result.stdout)['completed']), 10)
+        self.assertEqual(len(json.loads(result.stdout)['completed']), 12)
         result = self.run_link('--execute')
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertTrue(all(x['action'] == 'unchanged' for x in json.loads(result.stdout)['links']))

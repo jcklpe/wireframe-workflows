@@ -81,18 +81,18 @@ Adopted by the user on 2026-10-27 and revised on 2026-10-28. Skills are named ve
 
 Component Library changes start inside `build-wireframes` as proposals, and exports are handled by `promote-wireframes` and the tool skills, until a clear need for a separate skill appears.
 
-**Ideas the user has raised, not yet designed** (2026-10-29):
+## Connected Workshop and repair skills
+The approved direction is one connected Workshop with a cover-like launcher, rather than scenario containers by default. Entries expose activities and starting conditions while retaining links to user-flow records. Screen addresses describe navigation; layout shows transitions; entries provide review access. Scratchpad and Archive retain flexible groups for separate explorations and history. The policies make annotation scope and review-scale legibility explicit and distinguish structural inspection, visual inspection, playback and human acceptance.
 
-- `report-bug`: a person clicking through the prototype finds a route that leads somewhere unexpected, or a panel or modal that does not open where expected. The skill would capture where they were, what they did and what they expected, then trace the links to the cause.
-- `audit-consistency`: routes built early drift from decisions made later. The skill would check screens against recorded decisions and shared patterns and list what has fallen behind.
-- A copy-and-paste prompt in the README that sets up the collection through `setup-wireframe-workflows`, and a setup path for designers without Git that links the skills where their agent finds them.
-- Adoption in team project repositories, with an instruction in each that points agents to `setup-wireframe-workflows`.
+The user approved D1–D6 on 2026-11-01: the connected Workshop/launcher policy, annotation guidance, verification policy, [fix-wireframe-bug-reports](../../fix-wireframe-bug-reports/SKILL.md), [audit-wireframe-consistency](../../audit-wireframe-consistency/SKILL.md), and the boundary with DesignOps. The repair skill works from natural reports without a user form; the audit compares connected states against agreed decisions without manufacturing agreement. The skills' original working names were `report-bug` and `audit-consistency`. Local wording is approved; publication, consuming-project adoption and Figma application are separate remaining steps.
+
+Component dependency inspection, migration and verification remain wireframing operations under existing authority. Broader human governance belongs to separate DesignOps work. Project Workflows can track contributions and tool capabilities can perform service operations without either determining a team's design agreements. No DesignOps dependency is adopted here.
 
 ## Linking projects to design files
 Adopted by the user on 2026-10-27. Design files live in the cloud while project documents and exports live in a repository, so a project-owned `design-files.json` at the root of the folder the design work belongs to connects them. It lists each design file's name, tool, URL and file ID, maps each standard page role to the file's actual page name, and says where local copies such as archives, image exports, tokens and tool-specific export manifests live. Agents and tool skills read it instead of searching for the right file. In the other direction, the Cover links back to the repository, and a tool that can store file metadata records the repository's address in the file. The README defines the format, and `setup-wireframe-workflows` writes and checks it. An existing tool-specific manifest, such as Landlord Mapper's token export manifest, stays as it is and is referenced from `local`.
 
-## Agent proposals not yet decided
-- **Entry boards.** A small board at the top of each page saying what the page is for, mainly for newcomers and agents.
+## Entry orientation
+Workshop has one launcher per owned working prototype under the approved policy. Orientation on other page roles follows their existing policies; a generic entry board on every page is not required.
 
 ## Open questions
 - Can Figma's API copy a board from one page to another, or does a person paste there too?
