@@ -1,17 +1,19 @@
 ---
-attention: live
+attention: historical
 reviewed: 2026-11-02
 ---
 # Agent policy migration — Wireframe Workflows work
+Historical record. Closed 2026-11-02. Stable slug: `agent-policy-migration`. Current rules are maintained in [the agent policy index](../agent-policies/policy.index.md), [AGENTS](../../AGENTS.md), [README](../../README.md), and the root wireframing skills. No implementation successor is needed; ordinary-use observation is tracked separately in [TODO](../../TODO.md).
 Opened 2026-11-02. Stable slug: `agent-policy-migration`. [Concept and scope](agent-policy-migration.md).
 
 ## To Do
-No implementation work remains. Formal spike archival awaits the normal separate closure decision.
+None. Aslan authorized closure and archival on 2026-11-02.
 
 ## Ready for Human QA
-- No receiving adoption or observed client use is established by preparing this handoff. After actual migration, identify one ordinary authorized task that can check real index/prerequisite use and retained safeguards. Record the result separately from structural checks; do not perform service writes just for QA.
+No migration acceptance is outstanding. The next ordinary wireframing-task observation is deferred to TODO and is not claimed as tested here.
 
 ## Done
+- No receiving adoption or observed client use is established by preparing this handoff. After actual migration, identify one ordinary authorized task that can check real index/prerequisite use and retained safeguards. Record the result separately from structural checks; do not perform service writes just for QA. — Deferred beyond this completed migration to the explicit ordinary-use observation in TODO; no live/client compliance claim is made.
 - Re-read AGENTS, current Git/index/concurrent state and the exact source/adoption/commit authority. Preserve unrelated work and resolve any explicit shared-worktree hold before edits. — Rechecked instructions, scope, current index and worktree; preserved existing receiving handoff/index and other work.
 - Obtain the exact provider object through an authorized route, run the deterministic updater preview, review actual overlaps/configuration/baselines, and apply only the authorized package delivery. — Delivered exact provider through deterministic preview/apply; child 5f66dc1217e9771c175c4d5993595cb53148f3fd retains the adaptation and corrected separate locators. Repeat preview is unchanged.
 - Inventory standing obligations, human/design/product governance, procedural owners and incoming links; record the old/new identity/scope mapping and real prerequisite reasons, without duplicating an existing rule or inventing permissions. — Recorded the complete seven-agreement mapping and original hashes; no original content or identity was removed.
@@ -48,3 +50,6 @@ All ten records are adopted under the actual chat decision. AGENTS routes to the
 - Consolidate the full seven original rule bodies into their corresponding adopted operational records, preserve IDs and authority safeguards, remove the old policies folder, and repair incoming links and routing. — Applied under the explicit user instruction; verification and scoped checkpoint follow. No additional governance layer or retirement was introduced.
 
 - Single-layer verification: all seven original complete bodies were compared against their prior committed sources and are retained after normalizing local link targets and the explicit Workshop agent-scope sentence. All root-skill local file targets resolve; full policy link/metadata/graph checks pass, index regeneration is unchanged, and updater preview is unchanged after child checkpoint `67cf3702330ef98d13c5d3f07a2fc94e5d1120e2`. No old policy directory remains. Private Kaizen correction recorded separately; no standing global rules changed.
+
+## Closure verification — 2026-11-02
+Aslan accepted the consolidated result and explicitly authorized closeout, archival, a closing commit and publication. The seven complete operational rules and three adopted kernels remain in one agent-policy directory. Durable routing, setup/update procedures and README own current guidance. This record retains the earlier candidates and correction sequence as history. Archive navigation and index links were repaired. Policy checks and no-op generation passed; the selected dependency source is already published on provider main. Dependency adaptation branch publication must precede the parent. Closing message review is the remaining commit gate required by run-project-spike.

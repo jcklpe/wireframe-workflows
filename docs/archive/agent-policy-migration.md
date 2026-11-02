@@ -1,8 +1,9 @@
 ---
-attention: live
+attention: historical
 reviewed: 2026-11-02
 ---
 # Agent policy migration — Wireframe Workflows
+Historical record. Closed 2026-11-02. Stable slug: `agent-policy-migration`. Current rules are maintained in [the agent policy index](../agent-policies/policy.index.md), [AGENTS](../../AGENTS.md), [README](../../README.md), and the root wireframing skills. No implementation successor is needed; ordinary-use observation is tracked separately in [TODO](../../TODO.md).
 Opened 2026-11-02. Stable slug: `agent-policy-migration`. [Tasks](agent-policy-migration.todo.md). This is a bounded receiving-project handoff; preparation changes no package, routing, policy status, tool, remote or design artifact.
 
 ## Ownership and current state
@@ -19,7 +20,7 @@ Current policy inventory:
 - `policies/verification.md`
 - `policies/workshop.md`
 
-Related owners: [wireframe workflow foundations](wireframe-workflow-foundations.md). Those completed/adoption/design scopes retain their own remaining QA and closure decisions; this new receiving phase does not reopen or silently close them. Central coordination lives in Project Workflows, `docs/active-spikes/agent-policy-rollout.md` (prepared locally, not published). [Project instructions](../../AGENTS.md) remain authoritative.
+Related owners: [wireframe workflow foundations](../active-spikes/wireframe-workflow-foundations.md). Those completed/adoption/design scopes retain their own remaining QA and closure decisions; this new receiving phase does not reopen or silently close them. Central coordination lives in Project Workflows, `docs/active-spikes/agent-policy-rollout.md` (prepared locally, not published). [Project instructions](../../AGENTS.md) remain authoritative.
 
 ## Project boundaries
 This is the canonical Wireframe Workflows repository. Review which obligations govern agents and which design agreements govern everyone. Preserve the latter separately and keep skills tool-agnostic. Do not change actual design files, promote boards, alter another owner’s pages or migrate the nested Agentic Wiki checkout here. The nested copy currently has byte-identical seven policy bodies/AGENTS but a separate adaptation/history; deliver its reviewed source later through the Agentic Wiki owner, without redrafting the same policies independently.
@@ -80,7 +81,7 @@ The current source updater skill says changed policies apply to new work. This c
 
 Proposed AGENTS replacement for the first paragraph under Writing skills and policies:
 
-> Agent-only obligations are indexed in [docs/agent-policies/policy.index.md](docs/agent-policies/policy.index.md). Read the applicable adopted policies and their complete prerequisite closure before work in scope; proposals are not operative. Shared design agreements remain in `policies/` and preserve their requirements for design work. Procedures live in the root skills and reference the applicable obligations and agreements rather than redefining them. Use the selected Project Workflows policy-management skills for policy changes. Package delivery does not adopt candidate policies or amend operative project copies.
+> Agent-only obligations are indexed in [docs/agent-policies/policy.index.md](../agent-policies/policy.index.md). Read the applicable adopted policies and their complete prerequisite closure before work in scope; proposals are not operative. Shared design agreements remain in `policies/` and preserve their requirements for design work. Procedures live in the root skills and reference the applicable obligations and agreements rather than redefining them. Use the selected Project Workflows policy-management skills for policy changes. Package delivery does not adopt candidate policies or amend operative project copies.
 
 Proposed configuration: retain `documents.agent_policies = "docs/agent-policies"`; change the stale `documents.policies = "docs/policies"` locator to `documents.policies = "policies"` for the actual shared agreement directory. This is an intentional local configuration change after the updater's mechanically preserved-values phase, not an upstream default or a fabricated baseline.
 
@@ -97,7 +98,7 @@ Add a short "Wireframes" section to the project's instructions, usually `AGENTS.
 
 README addition immediately below the Policies heading, retaining its seven-link list:
 
-Shared design agreements in `policies/` retain the conventions and ownership boundaries for design work by people and agents. Agent-only obligations are indexed separately in [the project-owned agent policy index](docs/agent-policies/policy.index.md); each operational policy requires agents to apply the complete corresponding agreement within its scope. Root skills describe task procedures. Adopting projects review and adopt their own policy copies explicitly; receiving this package or passing a structural check does not adopt policies or authorize design-file changes.
+Shared design agreements in `policies/` retain the conventions and ownership boundaries for design work by people and agents. Agent-only obligations are indexed separately in [the project-owned agent policy index](../agent-policies/policy.index.md); each operational policy requires agents to apply the complete corresponding agreement within its scope. Root skills describe task procedures. Adopting projects review and adopt their own policy copies explicitly; receiving this package or passing a structural check does not adopt policies or authorize design-file changes.
 
 The seven operational bodies are reviewable in the candidate files; all share the same authority/permission limits. Approval must cover the three kernels, seven operational records and the exact dependent wording before their operative adoption/routing transition. The receiving index must change its candidate notice to describe actual adopted status only after that decision.
 
