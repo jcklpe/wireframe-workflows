@@ -4,7 +4,7 @@ description: "Lay out several design options side by side in a wireframe file's 
 ---
 
 # Explore Wireframe Options
-Answer a design question by showing options instead of guessing. Read [Scratchpad and Archive](../policies/scratchpad-and-archive.md) for grouping, status, integration and history. Page rules are in [pages and agent boundaries](../policies/pages.md), and made-up content follows the [example content policy](../policies/example-content.md); the project's `design-files.json` names the file and its pages.
+Answer a design question by showing options instead of guessing. Read [Scratchpad and Archive](../docs/agent-policies/PRESERVE-EXPLORATION-scratchpad-and-archive.md) for grouping, status, integration and history. Page rules are in [pages and agent boundaries](../docs/agent-policies/RESPECT-PAGES-pages.md), and made-up content follows the [example content policy](../docs/agent-policies/LABEL-EXAMPLES-example-content.md); the project's `design-files.json` names the file and its pages.
 
 ## Scope and authority
 Scratchpad, the requester's own when pages have owners, is the one page where the agent may sketch freely. Read Workshop, but change it only once the user has chosen and integration is within the requested scope. This procedure compares alternatives; loose sketches or studies can follow the Scratchpad policy without being forced into a question-and-choice exercise. Leave Prototype, Showroom and the Component Library alone.

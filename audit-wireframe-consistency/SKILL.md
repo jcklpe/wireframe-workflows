@@ -4,7 +4,7 @@ description: "Audit connected wireframe routes against agreed patterns, componen
 ---
 
 # Audit Wireframe Consistency
-Compare actual wireframes with the project's agreed design and connected behavior. Read the target project's instructions, manifest and current decisions, then [page boundaries](../policies/pages.md), [Workshop](../policies/workshop.md), [naming and layout](../policies/board-numbering-and-layout.md) and [verification](../policies/verification.md). Use the selected tool's skill for inspection.
+Compare actual wireframes with the project's agreed design and connected behavior. Read the target project's instructions, manifest and current decisions, then [page boundaries](../docs/agent-policies/RESPECT-PAGES-pages.md), [Workshop](../docs/agent-policies/CONNECT-WORKSHOP-workshop.md), [naming and layout](../docs/agent-policies/ARRANGE-BOARDS-board-numbering-and-layout.md) and [verification](../docs/agent-policies/REPORT-VERIFICATION-verification.md). Use the selected tool's skill for inspection.
 
 ## Scope
 An audit is read-only unless the user also authorizes corrections. Work within the named owner, pages and routes; reading another contributor's work does not authorize changing it. Differences can be deliberate, unresolved or accidental. Do not invent agreement from visual similarity, recency or an agent-created status label.

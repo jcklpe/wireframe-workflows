@@ -4,7 +4,7 @@ description: "Investigate and fix reported wireframe or prototype problems, such
 ---
 
 # Fix Wireframe Bug Reports
-Make the user's report actionable. Read the target project's instructions, design-file manifest and relevant decisions, then [page boundaries](../policies/pages.md), [Workshop](../policies/workshop.md) and [verification](../policies/verification.md). Use the selected design tool's skill for inspection and changes.
+Make the user's report actionable. Read the target project's instructions, design-file manifest and relevant decisions, then [page boundaries](../docs/agent-policies/RESPECT-PAGES-pages.md), [Workshop](../docs/agent-policies/CONNECT-WORKSHOP-workshop.md) and [verification](../docs/agent-policies/REPORT-VERIFICATION-verification.md). Use the selected design tool's skill for inspection and changes.
 
 ## Scope
 A request to fix a reported problem authorizes a bounded correction within the user's existing scope. A question, discussion-only request or request to log it for later does not authorize a design change. Preserve other contributors' work; shared-library changes and Prototype promotion retain their existing boundaries. A bug report is not permission for a wider redesign.

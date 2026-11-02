@@ -4,7 +4,7 @@ description: "Check wireframes against the WCAG success criteria a design can sh
 ---
 
 # Audit WCAG
-Catch accessibility problems while they are still cheap to fix. A wireframe shows some of what WCAG asks for, such as colors, sizes, structure, labels and states, but not how the built product behaves with a keyboard or a screen reader. The audit says which is which and never claims that the product conforms. Page rules are in [pages and agent boundaries](../policies/pages.md); the project's `design-files.json` names the file, its pages and its design tokens, and the tool skill handles the mechanics.
+Catch accessibility problems while they are still cheap to fix. A wireframe shows some of what WCAG asks for, such as colors, sizes, structure, labels and states, but not how the built product behaves with a keyboard or a screen reader. The audit says which is which and never claims that the product conforms. Page rules are in [pages and agent boundaries](../docs/agent-policies/RESPECT-PAGES-pages.md); the project's `design-files.json` names the file, its pages and its design tokens, and the tool skill handles the mechanics.
 
 ## Scope and authority
 Audit the boards the user names, or the flow being promoted when [promote-wireframes](../promote-wireframes/SKILL.md) calls for it. Check against [WCAG 2.2](https://www.w3.org/TR/WCAG22/) level AA unless the project names another standard or level. The audit only reads: it changes no boards. Fixes are made in Workshop through [build-wireframes](../build-wireframes/SKILL.md), never in Prototype directly.

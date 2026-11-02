@@ -11,10 +11,10 @@ Define a tool-agnostic way to organize wireframe files and to work in them with 
 - **Tool-agnostic method, tool-specific mechanics.** This collection describes how to work; connecting to a design tool, calling its API or MCP server and exporting from it belong to tool skills such as Agent Hands' `use-penpot` or the Figma MCP. Each side references the other.
 
 ## Board numbering and layout
-Navigation addresses and descriptive screen/state names identify boards uniquely in the current design; persistent screen or view IDs are not required. Flows progress left to right with alternate branches on separate rows. A short code can combine the navigation address and abbreviated name/state, such as `1.1.1.pdso`. The approved [policy](../../policies/board-numbering-and-layout.md) requires page-local uniqueness, meaningful qualifiers to resolve collisions, project-defined overlay notation and optional viewport qualifiers. References outside a page include its file/page context. Scratchpad organization follows its own policy.
+Navigation addresses and descriptive screen/state names identify boards uniquely in the current design; persistent screen or view IDs are not required. Flows progress left to right with alternate branches on separate rows. A short code can combine the navigation address and abbreviated name/state, such as `1.1.1.pdso`. The approved [policy](../agent-policies/ARRANGE-BOARDS-board-numbering-and-layout.md) requires page-local uniqueness, meaningful qualifiers to resolve collisions, project-defined overlay notation and optional viewport qualifiers. References outside a page include its file/page context. Scratchpad organization follows its own policy.
 
 ## Page taxonomy
-Adopted by the user on 2026-10-27, with agent boundaries still provisional. The maintained version now lives in the [pages policy](../../policies/pages.md).
+Adopted by the user on 2026-10-27, with agent boundaries still provisional. The maintained version now lives in the [pages policy](../agent-policies/RESPECT-PAGES-pages.md).
 
 | Page | Purpose |
 | --- | --- |
@@ -59,7 +59,7 @@ On merging, Figma's branching flags conflicts layer by layer, merges a branch al
 ## Policies, skills and references
 Adopted by the user on 2026-10-28. Rules that must hold whenever anyone works in a design file are policies, because a skill only loads when a request triggers it; an adopting project's instructions tell agents to read the policies before touching the file. Procedures with steps are skills. Formats and contracts are references in the README.
 
-The policies are [pages and agent boundaries](../../policies/pages.md) (page roles, how they work together, who may change what, and naming by role), [working in Workshop](../../policies/workshop.md), [Showroom](../../policies/showroom.md) and [example content](../../policies/example-content.md). Showroom in particular is curated work whose form should emerge from real walkthroughs, so it is a policy rather than a procedure.
+The policies are [pages and agent boundaries](../agent-policies/RESPECT-PAGES-pages.md) (page roles, how they work together, who may change what, and naming by role), [working in Workshop](../agent-policies/CONNECT-WORKSHOP-workshop.md), [Showroom](../agent-policies/CURATE-SHOWROOM-showroom.md) and [example content](../agent-policies/LABEL-EXAMPLES-example-content.md). Showroom in particular is curated work whose form should emerge from real walkthroughs, so it is a policy rather than a procedure.
 
 ## Skill map
 Adopted by the user on 2026-10-27 and revised on 2026-10-28. Skills are named verb-first and link to the policies rather than restating them. People use the wireframes to discuss the design. Implementation is moving to coding agents, so detailed build information goes to them as structured specs rather than annotated spec sheets for human developers.
@@ -108,4 +108,4 @@ Workshop has one launcher per owned working prototype under the approved policy.
 ## Scratchpad and browsable history
 The user supports flexible exploration groups, explicit status, concise canvas context and repository-owned decisions, rationale, tasks and verification. Organizing by design question is useful but not required. Exploration should retain a browsable history, with less-current material eligible for an Archive page rather than disappearing into version history alone.
 
-The approved [Scratchpad and Archive policy](../../policies/scratchpad-and-archive.md) defines flexible grouping, explicit status, archival mechanics and information boundaries. Archive is shared, at the end of the file, with the original owner clear in each group. The pages policy, manifest documentation and relevant skills follow this model. No existing design file has been reorganized.
+The approved [Scratchpad and Archive policy](../agent-policies/PRESERVE-EXPLORATION-scratchpad-and-archive.md) defines flexible grouping, explicit status, archival mechanics and information boundaries. Archive is shared, at the end of the file, with the original owner clear in each group. The pages policy, manifest documentation and relevant skills follow this model. No existing design file has been reorganized.
