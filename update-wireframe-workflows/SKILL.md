@@ -4,7 +4,7 @@ description: "Bring a project's adopted Wireframe Workflows up to date with shar
 ---
 
 # Update Wireframe Workflows
-Bring a project's adopted copy of this collection up to date with shared `main` while keeping the project's own changes, then carry what changed through to the project's instructions and design files. A project adopts the collection as a pinned `wireframe-workflows/` submodule on its own `project/<project-slug>` branch, as set up by [setup-wireframe-workflows](../setup-wireframe-workflows/SKILL.md). The pages and their rules are in [pages and agent boundaries](../policies/pages.md); the manifest format and the design-tool capability list are in the [collection README's references](../README.md#references).
+Bring a project's adopted copy of this collection up to date with shared `main` while keeping the project's own changes, then carry what changed through to the project's instructions and design files. A project adopts the collection as a pinned `wireframe-workflows/` submodule on its own `project/<project-slug>` branch, as set up by [setup-wireframe-workflows](../setup-wireframe-workflows/SKILL.md). The pages and their rules are in [pages and agent boundaries](../docs/agent-policies/RESPECT-PAGES-pages.md); the manifest format and the design-tool capability list are in the [collection README's references](../README.md#references).
 
 ## Scope and authority
 Read the project's instructions first; they override these defaults. An update request covers updating the project branch and the project's pin locally. It does not cover pushing, publishing, changing a shared design file without approval, deleting pages or boards, or rewriting history. Never reset, stash or force a checkout to make an update easier, and preserve concurrent work in both repositories.
@@ -26,7 +26,7 @@ Compare that meeting point with `main` and with the project branch, across whole
 - **Project choices** on the project branch: changes that suit this project only. They stay on the project branch.
 - **Conflicts**, where both sides changed the same rule or step. Show each one to the user and settle it with them; don't pick a side silently.
 
-Read the commit messages and the diffs of `policies/`, the README's references and the skills. Note every change that reaches beyond the collection: a new or renamed page role, a new manifest version, a new design-tool capability, or new routing text for the project's instructions. Step 4 handles these.
+Read the commit messages and the diffs of `docs/agent-policies/`, the README's references and the skills. Note every change that reaches beyond the collection: a new or renamed page role, a new manifest version, a new design-tool capability, or new routing text for the project's instructions. Step 4 handles these.
 
 ## 3. Merge and pin
 1. Merge `origin/main` into the project branch with an ordinary merge, which keeps both histories; a fast-forward is fine when the project branch has no changes of its own. Never reset the project branch to `main`.
@@ -40,7 +40,7 @@ Handle each change from step 2 that reaches beyond the collection:
 - **Manifest:** if the manifest format has a new `schema_version`, update `design-files.json` to it, keeping every existing entry and value.
 - **Design tool:** if the capability list has grown, check that the tool skill explains each new item, as in setup's step 3, and report any gap.
 - **Pages:** if page roles were added, renamed or redefined, read the design file and propose the changes as one short list, as in setup's step 4. Wait for approval, make the approved changes through the tool skill and record them in the manifest's `pages`. Never delete pages or boards, or move boards between pages, unless the user asks for that specifically.
-- **Policies and design agreements:** delivery supplies candidate agent policies, not consumer adoption. Compare project-owned operative copies with their actual prior source and the incoming candidates; use the selected policy-management skills and an actual human adoption decision before changing operative obligations. Review shared design agreement changes separately and retain project ownership and authorization boundaries. Rework existing boards only when the user asks.
+- **Agent policies:** delivery supplies candidate agent policies, not consumer adoption. Compare project-owned operative copies with their actual prior source and the incoming candidates; use the selected policy-management skills and an actual human adoption decision before changing operative obligations. Retain project ownership and authorization boundaries. Rework existing boards only when the user asks.
 
 ## 5. Share improvements back
 When a change on the project branch would help every project, offer to contribute it. Rebuild it as a new commit on a clean branch from shared `main`, with nothing project-specific in it: no project names, file identifiers, page names or private notes. Never merge the project branch into `main`. Publishing that branch and merging it into `main` are the user's actions.

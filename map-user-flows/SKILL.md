@@ -4,7 +4,7 @@ description: "Work out the route someone takes through a product to reach a goal
 ---
 
 # Map User Flows
-Work out how someone gets to a goal before building the screens for it. Page rules are in [pages and agent boundaries](../policies/pages.md), and exploration follows [Scratchpad and Archive](../policies/scratchpad-and-archive.md); the project's `design-files.json` names the file and its pages, and the tool skill handles the mechanics.
+Work out how someone gets to a goal before building the screens for it. Page rules are in [pages and agent boundaries](../docs/agent-policies/RESPECT-PAGES-pages.md), and exploration follows [Scratchpad and Archive](../docs/agent-policies/PRESERVE-EXPLORATION-scratchpad-and-archive.md); the project's `design-files.json` names the file and its pages, and the tool skill handles the mechanics.
 
 ## Scope and authority
 Draw only in Scratchpad. Read Workshop, Prototype and the project's requirements and research, but change nothing else. Base the flow on what the user and the sources say; where they are silent, ask rather than invent a need or a step. Research can contain personal details: summarize what it shows, cite where it came from, and never copy personal details into the design file.

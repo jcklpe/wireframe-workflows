@@ -22,15 +22,15 @@ Help me set up Wireframe Workflows from https://github.com/jcklpe/wireframe-work
 Cloning alone does not install skills globally. See [optional global discovery](setup-wireframe-workflows/references/global-skill-links.md) for selection, previews, conflicts and verification. A project's pinned collection remains authoritative over globally discovered skills.
 
 ## Policies
-Shared design agreements in `policies/` retain the conventions and ownership boundaries for design work by people and agents. Agent-only obligations are indexed separately in [the project-owned agent policy index](docs/agent-policies/policy.index.md); each operational policy requires agents to apply the complete corresponding agreement within its scope. Root skills describe task procedures. Adopting projects review and adopt their own policy copies explicitly; receiving this package or passing a structural check does not adopt policies or authorize design-file changes.
+The complete agent policies live in [docs/agent-policies/](docs/agent-policies/policy.index.md), including page ownership, wireframing conventions and verification obligations. Root skills describe task procedures under those policies. Adopting projects review and adopt their own policy copies explicitly; receiving this package or passing a structural check does not adopt policies or authorize design-file changes.
 
-- [Pages and agent boundaries](policies/pages.md): the pages, how they work together, owned pages, who may change what, and naming by role.
-- [Working in Workshop](policies/workshop.md): how changes to the work-in-progress prototype are made.
-- [Verification](policies/verification.md): structural, visual, playback and acceptance evidence, with explicit coverage and limits.
-- [Showroom](policies/showroom.md): how the curated walkthrough is kept.
-- [Example content](policies/example-content.md): realistic, labelled, made-up content.
-- [Board numbering and canvas layout](policies/board-numbering-and-layout.md): unique navigation addresses, descriptive names, short codes and flow arrangement.
-- [Scratchpad and Archive](policies/scratchpad-and-archive.md): flexible exploration groups, explicit status, integration and browsable history.
+- [Pages and agent boundaries](docs/agent-policies/RESPECT-PAGES-pages.md): the pages, how they work together, owned pages, who may change what, and naming by role.
+- [Working in Workshop](docs/agent-policies/CONNECT-WORKSHOP-workshop.md): how changes to the work-in-progress prototype are made.
+- [Verification](docs/agent-policies/REPORT-VERIFICATION-verification.md): structural, visual, playback and acceptance evidence, with explicit coverage and limits.
+- [Showroom](docs/agent-policies/CURATE-SHOWROOM-showroom.md): how the curated walkthrough is kept.
+- [Example content](docs/agent-policies/LABEL-EXAMPLES-example-content.md): realistic, labelled, made-up content.
+- [Board numbering and canvas layout](docs/agent-policies/ARRANGE-BOARDS-board-numbering-and-layout.md): unique navigation addresses, descriptive names, short codes and flow arrangement.
+- [Scratchpad and Archive](docs/agent-policies/PRESERVE-EXPLORATION-scratchpad-and-archive.md): flexible exploration groups, explicit status, integration and browsable history.
 
 ## Skills
 | Skill | Used when |
@@ -102,7 +102,7 @@ Design files live in the cloud, while a project's documents and exports live in 
 - `local` is optional and says where the project keeps copies: a native archive, image exports, design tokens, specs for coding agents and any tool-specific export manifest.
 - `local.routes` may point to an existing project-owned route or board record. Keep Workshop launcher/entry metadata there rather than duplicating the registry in this manifest. If no such record exists, add a small route record and reference it here; its format remains project-defined.
 
-The route record identifies each Workshop launcher and its entries: descriptive name, design page/board reference, direct prototype link, relevant user-flow scenario and starting conditions, plus material limitations. Omit inapplicable fields. A scenario reference can point to another design file or repository; it is not another screen address. Several entries may share a screen. The [Workshop policy](policies/workshop.md#launcher-and-entry-points) defines how the launcher and repository record stay aligned.
+The route record identifies each Workshop launcher and its entries: descriptive name, design page/board reference, direct prototype link, relevant user-flow scenario and starting conditions, plus material limitations. Omit inapplicable fields. A scenario reference can point to another design file or repository; it is not another screen address. Several entries may share a screen. The [Workshop policy](docs/agent-policies/CONNECT-WORKSHOP-workshop.md#launcher-and-entry-points) defines how the launcher and repository record stay aligned.
 
 `pages.archive` is the browsable history page in the design tool; `local.archive` is a native file export. They serve different purposes.
 

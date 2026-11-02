@@ -4,7 +4,7 @@ description: "Compare a running product with its wireframe file's Prototype and 
 ---
 
 # Check Implementation
-Close the loop from design to build. Coding agents build from the specs; this skill checks that what they built matches Prototype and says where it does not. Page rules are in [pages and agent boundaries](../policies/pages.md); the project's `design-files.json` names the design file, its pages and where its specs live, and the tool skill handles the mechanics on the design side.
+Close the loop from design to build. Coding agents build from the specs; this skill checks that what they built matches Prototype and says where it does not. Page rules are in [pages and agent boundaries](../docs/agent-policies/RESPECT-PAGES-pages.md); the project's `design-files.json` names the design file, its pages and where its specs live, and the tool skill handles the mechanics on the design side.
 
 ## Scope and authority
 Check the screens the user names, in a development or test environment they name. The check only reads: it changes neither the product's code nor the design file. Use the project's own test accounts and test data; never enter real credentials or personal data. On a live site, only look: never submit forms or change data. Don't file issues or message anyone about the results without the user's go-ahead.
