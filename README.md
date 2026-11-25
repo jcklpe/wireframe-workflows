@@ -54,10 +54,11 @@ The skills describe what to do; a design tool's own skill describes how. A tool 
 
 - **List and create pages**, and change their order.
 - **Copy a board** from one page to another.
+- **Replace a board** with a copy of a board from another page, keeping the replaced board's identity so links and comments aimed at it keep working.
 - **Export a board** as an image.
 - **Read prototype links** between boards.
 - **Read and write design tokens.**
-- **Save a named version** of the file.
+- **Save a named version** of the file, and lock it where the tool can.
 - **Lock a board**, an optional guard for promoted work.
 - **Store file metadata**, optional, so the design file can record a link back to its project repository.
 
